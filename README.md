@@ -1,16 +1,43 @@
-### Shortcuts  
-Blender relies heavily on shortcuts. See all shortcuts here [waldobronchart.github.io/ShortcutMapper/#Blender](http://waldobronchart.github.io/ShortcutMapper/#Blender). Some shortcuts depend on the position of the mouse e.g. __x__ for deleting only works when the mouse is over the 3D viewport.  
+doing papercraft
+================
 
-#### Customize UI
+## Introduction  
+
+This repository is a write up for an upcoming workshop @ the University of Applied Sciences Potsdam (Germany). We will explore the minimal basics of the 3D application Blender to create some primitive shapes. These shapes will then be unfolded for laser cutting. It is a walkthrough of some possible workflows. We will focus on using Blender and exporting 3D data from it. If you already know other 3D applications you can skip Blender and move on to the [Unfolding](#unfolding) section. _This is still work in progress, there might be_ 🐛_,_ 🐉 _and_ 👾_._
+
+## Prerequisites  
+
+- a computer
+- a 3 button mouse
+- Blender (or another 3D application if you already know how to model in 3D)
+- 123DMake
+- Processing (optional)
+
+## Blender (3D Application)  
+
+>Blender is a professional free and open-source 3D computer graphics software product used for creating animated films, visual effects, art, 3D printed models, interactive 3D applications and video games. Blender's features include 3D modeling, UV unwrapping, texturing, raster graphics editing, rigging and skinning, fluid and smoke simulation, particle simulation, soft body simulation, sculpting, animating, match moving, camera tracking, rendering, video editing and compositing. Alongside the modeling features it also has an integrated game engine.  
+>[From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Blender_\(software\))
+
+
+### Shortcuts  
+
+Blender relies heavily on shortcuts. See all shortcuts here [waldobronchart.github.io/ShortcutMapper/#Blender](http://waldobronchart.github.io/ShortcutMapper/#Blender). Some shortcuts depend on the position of the mouse e.g. __x__ for deleting only works when the mouse is over the 3D view.  
+
+### Search Menu  
+
+Another quick way to call actions open panels is the "Search Menu". It gives you quick access to all of Blenders commands by typing. you can open it just by hitting the __space bar__ This is pretty handy if you know a commands name but don't know where to find it. Read more [here.](https://www.blender.org/manual/interface/extended_controls.html)
+
+### Interface  
+
+##### Customize UI
 
 Go to: File > User Preferences… and select the "Input" tab.  
-
 
 - Change the Mouse selection from right click to left click in the settings > input tab
 - emulate Numpad (if you're on a laptop you can use the numbers instead of the numpad)
 - adjust UI colors in the theme tab (if you like it more fancy)  
 
-You need to hit "Save User Settings" at the bottom of the window to apply these changes. 
+You need to hit __"Save User Settings"__ at the bottom of the window to apply these changes. 
 
 ![blender-user-preferences.png](images/blender-user-preferences.png)  
 
@@ -26,24 +53,34 @@ You can add or remove windows by right clicking into the "seam" between two wind
 
 ![images/blender-ui.gif](images/blender-ui.gif)
 
-You can change the content of a window by changing the icon in the tool bar.  
+##### Window content
 
-![images/window-toolbar.png](images/window-toolbar.png)  
+You can change the content of a window by changing the icon in the header (which is at the bottom of the 3D view).  
 
-In the 3D View you also have a toolbar on the left and the tool shelf on the right. __t__ shows tool bar and __n__ the tool shelf.
+![images/blender-change-window-content.png](images/blender-change-window-content.png)  
 
+##### 3D View areas 
 
+Within the 3D view you also have a tool bar on the left and the tool shelf on the right. __t__ shows tool bar and __n__ the tool shelf. On the toolbar you have the most common commands for transformation, editing, creation and many more. On the tool shelf you can access properties for transformations, the view, the 3D cursor and many more. Both of these panels are kind of quick access palettes for properties and action that are essential for editing.  
 
-### Navigation  
+![images/blender-3d-viewport-tools.png](images/blender-3d-viewport-tools.png)  
 
-The basic navigation in the 3D viewport is done with the mouse. You can also change the view by using the numpad.  
+##### Display methods  
+
+You can switch the display method on the bottom of the 3D view. For us the only important options are "Solid", "Wireframe" and "Bounding Box".  
+
+![images/viewport-shading.png](images/viewport-shading.png)  
+
+### 3D View Navigation  
+
+The basic navigation in the 3D view is done with the mouse. You can also change the view by using the numpad.  
 
 | Mouse                       | Action                 |
 | --------------------------: | ----------             |
 | left mouse                  | select                 |
 | right mouse                 | set 3D cursor position |
 | middle mouse click          | orbit                  |
-| middle mouse click + shift  | pan                    |
+| middle mouse click + ⇧  | pan                    |
 | scroll                      | zoom                   |
 
 
@@ -75,21 +112,21 @@ _The most useful keys on the numpad are (table also has emulated numpad):_
 
 ### Object and Edit Mode  
 
-The "Object Mode" is for working with objects in a whole. The "Edit Mode" is for editing vertices, edges or faces of an object. When using [modifiers](#modifiers) you see their effect in object mode. Not in Edit Mode.
+The __"Object Mode"__ is for working with objects in a whole. The __"Edit Mode"__ is for editing vertices, edges or faces of an object. When using [modifiers](#modifiers) you see their effect in object mode. Not in Edit Mode.
 
 ### Selection 
 
-To select objects use the left mouse click (if set to left selection. The default is right selection). You can add or remove objects to or from the selection by holding shift. Selected objects are highlighted in orange (default theme). The first in the order of selected objects is a bit brighter. You can also select everything by hitting __a__. In "Edit Mode" there are some extra options for selecting things. You can switch between vertices, edges and faces selection and you can combine them with the buttons on the bar below the 3D viewport. 
+To select objects use the left mouse click (if set to left selection. The default is right selection). You can add or remove objects to or from the selection by holding __⇧__. Selected objects are highlighted in orange (default theme). The first in the order of selected objects is a bit brighter. You can also select everything by hitting __a__. In "Edit Mode" there are some extra options for selecting things. You can switch between vertices, edges and faces selection and you can combine them with the buttons on the bar below the 3D view. 
 
-![selection-type.png](images/selection-type.png)  
+![selection-modes.png](images/selection-modes.png)  
 
-The rectangular (hit r before selecting) or circular (hit c) selection by clicking and dragging only applies to the visible objects, vertices, edges and faces by default you can change this if you want. There are more options for selecting. Like Inverting selections and so on. See [the Blender Manual](https://www.blender.org/manual/modeling/meshes/selecting/introduction.html#selection-mode)  
+The rectangular (hit __r__ before selecting) or circular (hit __c__) selection by clicking and dragging only applies to the visible objects, vertices, edges and faces by default you can change this if you want. There are more options for selecting. Like Inverting selections and so on. See [the Blender Manual](https://www.blender.org/manual/modeling/meshes/selecting/introduction.html#selection-mode)  
 
 
 | Action                       | Result                               | Mode             |
 | :---                         | :---                                 | :---             |
 | Left Mouse                   | select                               | Object/Edit Mode |
-| Left Mouse + Shift           | add/remove                           | Object/Edit Mode |
+| Left Mouse + ⇧           | add/remove                           | Object/Edit Mode |
 | a                            | select all                           | Object/Edit Mode |
 | Ctrl + i                     | invert the current selection         | Object/Edit Mode |
 | Ctrl + Tab                   | selection mode switcher              | Edit Mode        |
@@ -103,11 +140,14 @@ The rectangular (hit r before selecting) or circular (hit c) selection by clicki
 
 ### Transformation  
 
-You can transform objects, groups, vertices, edges and faces (i.e. your selection) by using the 3D manipulators on the bottom of the 3D view. You can combine them or shut them off totally.  
+##### Using manipulators
+You can transform objects, groups, vertices, edges and faces (i.e. your selection) by using the 3D manipulators. Change between grab, rotate and scale mode on the bottom of the 3D view. You can combine them or shut them off totally. If you click and drag into the circle at the centre of the manipulator you transform on all axis at once.  
 
-![3D-manipulators.png](images/3d-manipulators.png)  
+![manipulation.gif](images/manipulation.gif)  
 
-Or by using the hotkeys. When using the hotkeys you can easily constrain the manipulation to the axis. Just hit for example g + x to only move the selection on the global x axis. If you hit x twice you transform on the objects local axis. The second transformation corresponds with the pulldown next to the manipulator buttons on the button of the viewport. Read some more about the manipulators [here](https://www.blender.org/manual/editors/3dview/transform/transform_control/manipulators.html).   
+##### Using hotkeys  
+
+Sometimes it is even more convenient to use the hotkeys. When using the hotkeys you can easily constrain the manipulation to an axis. Just hit for example __g + x__ to only move the selection on the global x-axis. If you hit __x__ twice you transform on the objects local axis. The second transformation corresponds with the pull down next to the manipulator buttons on the button of the view. Read some more about the manipulators [here](https://www.blender.org/manual/editors/3dview/transform/transform_control/manipulators.html).   
 
 | Key            | manipulation                                                  |
 | :---           | :---                                                          |
@@ -122,66 +162,155 @@ Or by using the hotkeys. When using the hotkeys you can easily constrain the man
 | s  + x/y/z × 2 | scale on one axis only  (selected axis)                       |
 | alt + g        | snaps selection to the center of the scene (Object Mode only) |
 
+![images/manipulation-hotkeys.gif](images/manipulation-hotkeys.gif)  
 
 
-### 3D Cursor 
+### 3D Cursor  
 
-shift c reset cursor  
+The 3D cursor is a pivot point for various features. You can e.g. rotate objects around the cursor (see image below). Newly created objects get created at this position. You can also use the cursor to snap objects to it or the other way around.  
 
-Shift + C = center cursor
+| Key/Action  | Result                                     |
+| :---        | :---                                       |
+| right click | set 3D cursor position                     |
+| ⇧ + c   | reset 3D cursor to the centre of the scene |
+| ⇧ + s   | open snap menu (snap to cursor and so on)  |
 
-### creation  
+![images/pivot-menu.png](images/pivot-menu.png)
 
-#### duplication
+### Creation  
 
-select Shift + d duplicates and puts it into grab mode
+##### Duplication
 
-#### add
+To duplicate the current selection (in edit or object mode) just hit __⇧ + d__. This also sets the newly created objects into grab mode so you can set their new position. All the [Transformation](#transformation) rules apply.  
 
-Use Create tab (left) to add basic objects  
-or use shift a 
+##### Add & Delete
 
-on creation you get in the tool bar the operator panel. If it is not there hit F6 to show it as a floating panel
+On the tool bar on the left of the 3D view you have various possibilities to add objects.
+Use the Create tab an the left to add basic shapes. You can also use the hotkey __⇧ + a__ or use the "Add" menu at the bottom of the 3D view. When you create a new shape you get a new panel at the bottom of the toolbar. There you can set additional settings for the newly created shape e.g. the subdivision of a ICO Sphere or the depth and the radius of a cylinder ad so on. __This is only possible on creation of the shape.__ If the operator panel does not show up just hit __F6__ to show it as a floating panel.  
+To delete the selection hit __x__ this applies for Edit- and Object Mode. In Edit Mode you get an additional panel to decide what should be deleted e.g. Vertices, edges, faces and even more options like edge collapse and more. You need to play with it and [read in the manual](https://www.blender.org/manual/modeling/meshes/editing/basics/deleting.html) about it.
 
-all objects get created at the 3D cursor. To have it at the center of the scene use "." You can also adjust the cursor on the Viewport Toolbar
-
-#### modifier
-
-
-#### delete  
-
-x and confirm
-
+| Key/Action   | Result                         |
+| :---         | :---                           |
+| Toolbar Left | add different type of objects  |
+| Add Menu     | add different type of objects  |
+| ⇧ + a        | open "Add" floating panel      |
+| F6           | open "Operator" floating panel |
+| x            | delete selection               |
 
 
-### mesh manipulation
+### Mesh Manipulation
 
-Go to Edit Mode by hitting TAB
-Select vertx by hitting left mouse to sleect multiple hold shift. You can chagne between vertex face and edge selection mode
+Besides just adding primitive shapes on one another you can also edit the mesh directly. To do this
+Go to Edit Mode by hitting the __⇥__ key (TAB). As mentioned before in the [Selection](#selection) section you can select in different way. Vertices only, faces or edges or combine these options. You can now move the selection around as mentioned in the [Transformation](#transformation) section. To manipulate your mesh even further you can now copy and paste your selection. (__⌘  + c__ & __⌘ + v__). Additionally you can use several options on the toolbar to edit your mesh. __Each option has its own operators.__  
 
-F Fill
-I Inset
-B Bevel (Moving the mouse changes the depth)
+##### Extrude  
 
-Ctrl f edit faces
-Ctrl v edit vertices
-    e.g. vertex slide
-Ctrl e edit edge
-    e.g. edge slide
+Extrudes the current selection. [All Transformation](#transformation) and [Selection](#selection) options apply. You can basically differentiate between "extrude region" (hit __e__ or use the button on the toolbar) and "extrude individual". The region extrudes the selection together. The individual extrusion uses each local axis to extrude. See [the manual for further information.](https://www.blender.org/manual/modeling/meshes/editing/duplicating/extrude.html)
 
-edge or vertex selected + gg goes into edge slide and vertex slide mode  
+![images/extrude.gif](images/extrude.gif)  
 
-### Modifiers
-- subdevision surface
-- boolean
+| Key/Action | Result             |
+| :--        | :--                |
+| e          | Extrude Region     |
+| ⌥ + e      | Extrude Individual |
+
+
+##### Other Manipulations  
+
+| Key/Action | Result                    | Description                                        |
+| :---       | :---                      | :---                                               |
+| f          | Fill                      | Fills the selection with vertices, edges and faces |
+| ^ + f      | Face manipulation panel   | Various options to edit faces                      |
+| i          | inset face                | Works only with faces                              |
+| ^ + b      | bevel                     | Works only with faces                              |
+| ^ + e      | Edge manipulation panel   | Various options to edit edges                      |
+| ^ + v      | Vertex manipulation panel | Various options to edit vertices                   |
+| w          | Specials Panel            | Holds various options                              |
+
+
+To create new geometry on an existing one you can use the several options. Subdivide, Loop Cut and Slide or the Knife to name just a few. Subdivide for example divides the surface a defined number of times and gives some more options, like smoothness and fractal noise. Loop Cut and Slide allows to subdivide a selection as well by setting a position to cut in by dragging the mouse. the Knife does what it says. Allows to cut the mesh.  
+
+Additionally you will see extra information on some tools on the bottom bar of the 3D view. The Knife for example needs to be confirmed by hitting ↩ (RETURN). Explore the tools by playing with them.  
+
+
+### Modifiers  
+
+Some modifications can be tedious when done by hand. Fortunately lots of operations have already been pre defined as modifiers. You can access them on the "Properties" window under the little wrench. All modifiers first only affect the selected object. If you want to generate real mesh from them you need to apply them. Also be aware that modifiers work in stack. The order of them define their outcome. You can move them in the stack order by using the up and down arrows on each modifier. We will take a look at some of them that might be useful for our purpose. When you export your form for exchange with the forthcoming applications you don't need to apply these modifiers. An export to Wavefront obj will add all these vertices to the mesh. Read more about modifiers [here.](https://www.blender.org/manual/modeling/modifiers/index.html)
+
+| Type     | Name                                                 | Short Description                                          |
+| :---     | :---                                                 |                                                            |
+| Generate | [Subdivision Surface Modifier](#subdivision-surface) | Subdivide surface of selected object                       |
+| Generate | [Boolean Modifier](#boolean)                         | Intersect, unify or differentiate objects from one another |
+| Deform   | [Simple Deform Modifier](#simple-deform)             | Deform objects by Twisting, bending,tabering or stretching them                                                           |
+| Generate | [Array Modifier](#array)                             | Create multiple copies of an object                                                            |
+| Generate | [Bevel Modifier](#bevel)                             |                                                            |
+|          |                                                      |                                                            |
+
+![images/modifiers.png](images/modifiers.png)  
+
+##### Subdivision Surface
+
+This modifier divides each surface by the number set in the view/render section of it. The difference between view and render should be clear. View is what we see in the 3D view. Render is what will be used in the final render. For our purpose the only thing we need to be concerned about is the view setting. This is what will be exported into our exchange formats. You can also switch between a "Simple" and "Catmull-Clark". To see the result before applying you need to switch the view to Wireframe. See the section [Display methods](#display-methods). You can read more about this modifier [here.](https://www.blender.org/manual/modeling/modifiers/generate/subsurf.html)  
+
+> __"Catmull-Clark"__
+> The default option, subdivides and smooths the surfaces. According to [its Wikipedia page](https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface), the “arbitrary-looking formula was chosen by Catmull and Clark based on the aesthetic appearance of the resulting surfaces rather than on a mathematical derivation.  
+
+![images/modifier-subdivision-800x500.gif](images/modifier-subdivision-800x500.gif)  
+
+
+##### Boolean  
+
+The "Boolean Modifier" can be used to create intersection between two objects. When you first apply it you wont see any change. You need to select another object in your scene to be used as the mesh object for the operation. Then you have 3 different methods to apply the modifier. Read more [here.](https://www.blender.org/manual/modeling/modifiers/generate/booleans.html) 
+
+| Methods    | Result                                                |
+| :---       | :---                                                  |
+| Intersect  | The target mesh is subtracted from the modified mesh. |
+| Union      | The target mesh is added to the modified mesh.        |
+| Difference | The modified mesh is subtracted from the target mesh. |
+
+![images/modifier-boolean.gif](images/modifier-boolean.gif)  
+
+##### Simple Deform  
+
+> The Simple Deform modifier allows easy application of a simple deformation to an object (meshes, lattices, curves, surfaces and texts are supported).  
+> [Simple Deform Modifier](https://www.blender.org/manual/modeling/modifiers/deform/simple_deform.html#simple-deform-modifier)  
+
+| Mode    | Description                                                                                                                           |
+| :---    | :---                                                                                                                                  |
+| Twist   | Rotates around the Z axis.                                                                                                            |
+| Bend    | Bends the mesh over the Z axis.                                                                                                       |
+| Taper   | Linearly scales along Z axis.                                                                                                         |
+| Stretch | Stretches the object along the Z axis (negative Factor leads to squash), preserving volume by scaling inversely on the X and Y axes.. |
+
+![images/modifier-simple-deform.gif](images/modifier-simple-deform.gif)  
+
+##### Array  
+
+The "Array Modifier" can be used to duplicate elements. You can offset the copies on the 3 axis relative or constantly. You can use an objects transformation to define the offset as well. There are some more options for this modifier. It can be pretty powerful to create multiple copies of an object. Read more [here.](https://www.blender.org/manual/modeling/modifiers/generate/array.html)  
+
+![images/modifier-array.gif](images/modifier-array.gif)  
+
+##### Subdivide and Displace  
+
+To show you what can be done by combining several modifiers the following animation shows how to use the Subdivide and Displace modifiers together. The subdivision is done to create more vertices and the displacement to generate some offset on them. The displace modifier uses textures to offset the vertices. You could also use an image or a ramp to displace the vertices. Be creative. This is already rather complex for the starters. Use it as inspiration. There are many more modifiers. To much to explore them all here. Play with all of them.  
+
+
+![images/modifier-subdivide-displace.gif](images/modifier-subdivide-displace.gif)  
+
+### Add-ons  
+
+### Export  
 
 -----
+
+### Unfolding  
+
 create unfolded data
 
-1. 123DMake (cross platform)
-2. Paperkura (Win 38$)
-3. dxf2papercraft commandline tool (open source Win & Linux)  
-4. Processing
+1. export from Blender
+2. 123DMake (cross platform)
+3. Paperkura (Win 38$)
+4. dxf2papercraft commandline tool (open source Win & Linux)  
 
 
 ### Workflow 1. 123DMake  
