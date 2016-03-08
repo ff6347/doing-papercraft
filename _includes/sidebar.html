@@ -1,0 +1,5 @@
+<ul>
+{% for page in site.data.meta %}
+  <li class="chapter"><a href="{{ page.path | prepend: site.baseurl }}">{{page.title}}</a></li>
+{% endfor %}
+</ul>

@@ -1,3 +1,5 @@
 screenrecords/
 papercraft/
 .vagrant
+_site/
+.DS_Store
