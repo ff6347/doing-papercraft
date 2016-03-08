@@ -3,7 +3,7 @@ doing papercraft
 
 ## Introduction  
 
-This repository is a write up for an upcoming workshop @ the University of Applied Sciences Potsdam (Germany). We will explore the minimal basics of the 3D application Blender to create some primitive shapes. These shapes will then be unfolded for laser cutting. It is a walkthrough of some possible workflows. We will focus on using Blender and exporting 3D data from it. If you already know other 3D applications you can skip Blender and move on to the [Unfolding](#unfolding) section. _This is still work in progress, there might be_ 🐛_,_ 🐉 _and_ 👾_._
+This repository is a write-down for an upcoming workshop @ the University of Applied Sciences Potsdam (Germany). We will explore the minimal basics of the 3D application Blender to create some primitive shapes. These shapes will then be unfolded for laser cutting. It is a walkthrough of some possible workflows. We will focus on using Blender and exporting 3D data from it. If you already know other 3D applications you can skip Blender and move on to the [Unfolding](#unfolding) section. _This is still work in progress, there might be_ 🐛_,_ 🐉 _and_ 👾_._
 
 ## Prerequisites  
 
@@ -13,7 +13,7 @@ This repository is a write up for an upcoming workshop @ the University of Appli
 - 123DMake
 - Processing (optional)
 
-## Blender (3D Application)  
+## 3D Application (Blender)   
 
 >Blender is a professional free and open-source 3D computer graphics software product used for creating animated films, visual effects, art, 3D printed models, interactive 3D applications and video games. Blender's features include 3D modeling, UV unwrapping, texturing, raster graphics editing, rigging and skinning, fluid and smoke simulation, particle simulation, soft body simulation, sculpting, animating, match moving, camera tracking, rendering, video editing and compositing. Alongside the modeling features it also has an integrated game engine.  
 >[From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Blender_\(software\))
@@ -292,18 +292,146 @@ The "Array Modifier" can be used to duplicate elements. You can offset the copie
 
 ##### Subdivide and Displace  
 
-To show you what can be done by combining several modifiers the following animation shows how to use the Subdivide and Displace modifiers together. The subdivision is done to create more vertices and the displacement to generate some offset on them. The displace modifier uses textures to offset the vertices. You could also use an image or a ramp to displace the vertices. Be creative. This is already rather complex for the starters. Use it as inspiration. There are many more modifiers. To much to explore them all here. Play with all of them.  
+To show you what can be done by combining several modifiers the following animation shows how to use the [Subdivision Surface](subdivision-surface) and [Displace](https://www.blender.org/manual/modeling/modifiers/deform/displace.html) modifiers together. The subdivision is done to create more vertices and the displacement to generate some offset on them. The displace modifier uses textures to offset the vertices. You could also use an image or a ramp to displace the vertices. Be creative. This is already rather complex for the starters. Use it as inspiration. There are many more modifiers. To much to explore them all here. Play with some/all of them.  
 
 
 ![images/modifier-subdivide-displace.gif](images/modifier-subdivide-displace.gif)  
 
 ### Add-ons  
 
+Additionally to the many build in features of Blender there is a whole ecosystem of [Add-ons](https://www.blender.org/manual/advanced/scripting/python/add_ons.html). There are several Add-ons that are directly distributed with Blender but bot enabled by default. You can browse them in the user preferences an enable those that you like to use. You can also install Add-ons from file. These are Python scripts that are written by members of the community. For our project there are two Add-ons we need to download and install.  
+
+![images/user-prefs-addon.png](images/user-prefs-addon.png)  
+
+1. [Export: Paper Model (.svg) | Export printable net for paper modeling](https://git.blender.org/gitweb/gitweb.cgi/blender-addons-contrib.git/blob_plain/refs/heads/master:/io_export_paper_model.py)  
+2. [Autodesk DXF (.dxf) | Export geometry to .DXF file format.](http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Import-Export/DXF_Exporter)  
+
+##### Paper Model Add-on 
+Both are pretty self-explanatory. The Paper Model Add-on adds under File > Export > Paper Model (.svg) the possibility to export a unfolded vector graphic of the selected object. In the export panel ae on the lower left side some export options for the graphic. You can specify the page size, add margins, create tabs for gluing your model and some more options. Read some more about this Add-on [here.](http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Import-Export/Paper_Model)
+
+![images/paprcraft-export.png](images/paprcraft-export.png)  
+![images/papercraft-export-settings.png](images/papercraft-export-settings.png)  
+
+The DXF export Add-on might be useful when working with "dxf2papercraft".
+
 ### Export  
 
------
+To export our data we can use different options. For one we can use the [Paper Model Add-on](#paper-model-add-on). Then we have a vector graphic we just have to clean up and convert to [DXF](https://en.wikipedia.org/wiki/AutoCAD_DXF) to use it for laser cutting. If this is your chosen workflow, move on to [Creating clean data](#creating-clean-data). If you want to use 123DMake or Paperkura you need to use an interchange format like [STL](https://en.wikipedia.org/wiki/STL_\(file_format\)) or [OBJ](https://en.wikipedia.org/wiki/Wavefront_.obj_file). You don't need to specify a final scaling. 123DMake and Paperkura both allow to edit the scaling of the Model and the material/paper size.  
 
-### Unfolding  
+
+##### STL STereoLithography
+
+If you use STL you need to use the ascii format and apply all modifiers when used. It would be better that you don't apply the modifiers from within the Add-on. As already mentioned the modifiers depend on their stack, so applying them by hand gives you a better control over the outcome.  
+
+#### OBJ Wavefront  
+
+You can also use the [Wavefront OBJ](https://en.wikipedia.org/wiki/Wavefront_.obj_file) format. It has some more options for the export but creates a equivalent result. You also should apply the modifiers first as mentioned for the [STL](#stl-stereolithography) export.  
+
+
+## 3D Application (Processing)  
+
+> Processing (programming language)
+> Processing is an open source programming language and integrated development environment (IDE) built for the electronic arts, new media art, and visual design communities with the purpose of teaching the fundamentals of computer programming in a visual context, and to serve as the foundation for electronic sketchbooks. The project was initiated in 2001 by Casey Reas and Benjamin Fry, both formerly of the Aesthetics and Computation Group at the MIT Media Lab. One of the stated aims of Processing is to act as a tool to get non-programmers started with programming through the instant gratification of visual feedback. The language builds on the Java language, but uses a simplified syntax and graphics programming model. In 2012, they started the Processing Foundation along with Daniel Shiffman, who formally joined as a third project lead.
+>[From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Processing_\(programming_language\))
+
+We wont go in depth into programming with Processing. This here are just some notes on how to export usable 3D data for our purpose. For this we have this simple 3D scene that will create a OBJ file you can use in 123DMake and Paperkura. First you need to install the [OBJExport](http://n-e-r-v-o-u-s.com/tools/obj/) library from [Nervous System](http://n-e-r-v-o-u-s.com/index.php). There is a guide on the Processing Wiki on [how to install libraries manually](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library#manual-install). If this worked you can open the Processing IDE, paste the sketch blow into the window and run the sketch. This will create simple scene with a cube and plane and will create the output.obj file next to your Processing sketch. This data can be edited in [Blender](#3d-application-\(blender\))   
+
+```js
+/**
+ * Simple sketch for doing papercraft
+ * uses the OBJExport library from
+ * http://n-e-r-v-o-u-s.com/tools/obj/
+ *
+ * @author Fabian "fabiantheblind" Morón Zirfas
+ * @license ISC https://opensource.org/licenses/ISC
+ */
+import nervoussystem.obj.*; // import the lib
+
+/**
+ * the setup runs once.
+ * We only set the size of the canvas.
+ *
+ */
+void setup() {
+  size(500, 400, P3D);
+}
+/**
+ * This runs all the time. Actually we use the noLoop() statement.
+ * it prevents that our scene gets exported each frame.
+ *
+ */
+void draw() {
+  background(255);
+  // set the position of the camera
+  camera(width/10, height/3, -30, width/2, height/2, -250, 0, 1, 0);
+  // start the export
+  beginRecord("nervoussystem.obj.OBJExport", "output.obj");
+  // offset the scene to the center of the canvas.
+  // This makes the calculation of the coordiantes easier
+  translate(width/2, height/2, -250);
+  // make a transformation that only affects the plane
+  pushMatrix();
+  // rotate by 90 degrees on the x axis
+  rotateX(radians(90));
+  // start the shape.
+  beginShape(QUADS);
+  // write the vertices
+  vertex(-100, -100, -10);
+  vertex(100, -100, -10);
+  vertex(100, 100, -10);
+  vertex(-100, 100, -10);
+  // end the shape
+  endShape();
+  // reset the matrix of the the sketch so the
+  // rotation does not affect the other objects
+  popMatrix();
+  // we don't want the cube tu be solid
+  noFill();
+  // start the cube
+  beginShape(QUADS);
+  vertex(-10, 10, 10);
+  vertex( 10, 10, 10);
+  vertex( 10, -10, 10);
+  vertex(-10, -10, 10);
+
+  vertex( 10, 10, 10);
+  vertex( 10, 10, -10);
+  vertex( 10, -10, -10);
+  vertex( 10, -10, 10);
+
+  vertex( 10, 10, -10);
+  vertex(-10, 10, -10);
+  vertex(-10, -10, -10);
+  vertex( 10, -10, -10);
+
+  vertex(-10, 10, -10);
+  vertex(-10, 10, 10);
+  vertex(-10, -10, 10);
+  vertex(-10, -10, -10);
+
+  vertex(-10, 10, -10);
+  vertex( 10, 10, -10);
+  vertex( 10, 10, 10);
+  vertex(-10, 10, 10);
+
+  vertex(-10, -10, -10);
+  vertex( 10, -10, -10);
+  vertex( 10, -10, 10);
+  vertex(-10, -10, 10);
+  // end the cube
+  endShape();
+  // end the recording
+  // this also exports the obj file
+  endRecord();
+  // we don't want to run the sketch again
+  noLoop();
+}
+```
+
+![images/processing-simple-3d-scene.png](images/processing-simple-3d-scene.png)  
+
+
+### Creating clean data
 
 create unfolded data
 
