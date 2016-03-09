@@ -5,12 +5,16 @@
   "main": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "less": "./node_modules/.bin/watch-less -d ./less -r ./css"
+    "less": "./node_modules/.bin/watch-less -d ./less -r ./css",
+    "combine": "babel-node ./bin/combine.js"
   },
   "keywords": [],
   "author": "Fabian 'fabiantheblind' Morón Zirfas <fabian.moron.zirfas@gmail.com> (http://fabianmoronzirfas.me)",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "concat-files": "^0.1.0",
+    "markdown-toc": "^0.12.3"
+  },
   "dependencies": {
     "github-markdown-css": "^2.2.1",
     "ungrid": "^1.0.1",

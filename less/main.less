@@ -4,22 +4,30 @@
 .markdown-body {
         box-sizing: border-box;
         min-width: 200px;
-        max-width: 980px;
+        // max-width: 700px;
         margin: 0 auto;
-        padding: 45px;
 }
 body{
-    padding-left:200px;
+    // padding-left:200px;
     margin:0;
 }
 #sidebar{
-   position:fixed;
-   height:100%;
-   width:200px;
-   top:0;
-   left:0;
-  padding-top: 45px;
+      float:left;
+    width:330px;
+    height:700px;
+    //background:#eee;
+    overflow: auto;
+  position:fixed;
+  font-size: 0.9em;
+    top:45px;
+    left:0;
+
 }
 #content{
-    width:100%;
+  position:fixed;
+  overflow: auto;
+  left: 345px;
+  top:45px;
+  max-width: 960px;
+  height:700px;
 }

@@ -16,7 +16,15 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://interface.fh-potsdam.de" # the base hostname & protocol for your site
 twitter_username: fabiantheblind
 github_username:  fabiantheblind
-exclude: [testfiles, node_modules, package.json]
+exclude: [testfiles, node_modules, package.json, bin, md]
 # Build settings
+# markdown: redcarpet
+# redcarpet:
+#   extensions: ["tables","no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+
 markdown: kramdown
+kramdown:
+  # Enable GitHub Flavored Markdown (fenced code blocks)
+  input: GFM
+
 highlighter: rouge

@@ -1,7 +1,13 @@
 [
-{"path":"blender.html","title":"Blender"},
-{"path":"processing.org.html","title":"Processing.org"},
-{"path":"123dmake.html","title":"123DMake"},
-{"path":"paperkura.html","title":"Paperkura"},
-{"path":"creating-clean-data.html","title":"Creating Clean Data"}
+"md/header.md",
+"md/intro.md",
+"md/toc.md",
+"md/workflows.md",
+"md/blender.md",
+"md/processing.org.md",
+"md/123dmake.md",
+"md/paperkura.md",
+"md/creating-clean-data.md",
+"md/laser.md",
+"md/links.md"
 ]
