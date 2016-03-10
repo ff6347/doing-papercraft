@@ -9,8 +9,23 @@ This document is a write-down for a workshop @ the University of Applied Science
 
 This document is split into several sub pages for an easier overview.  
 
-
-{% for item in site.data.meta %}
-    - {{item}}
+<ol>
+    
+{% for page in site.pages %}
+<li>
+<a href="{{ page.url}}">{{ page.title }}</a>
+</li>
 {% endfor %}
+</ol>
 
+
+## Prerequisites  
+
+- a computer
+- a 3 button mouse
+- Blender (or another 3D application if you already know how to model in 3D)
+- 123DMake 
+- Vector Editor (Illustrator, Inkscape, Affinity Designer)  
+- Processing  
+
+Some of these are optional. Depending on which workflow you are going to use.  

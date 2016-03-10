@@ -36,14 +36,14 @@ fs.writeFile('./_includes/sidebar.html', sidebar, (error) => {
   }
 
 });
-fs.writeFile('./md/toc.md', table, (error) => {
-  if (error) {
-    console.error(error);
-  } else {
-    concat(data, './index.md', () => {
-      console.log('done');
-    });
+// fs.writeFile('./md/toc.md', table, (error) => {
+//   if (error) {
+//     console.error(error);
+//   } else {
+//     concat(data, './index.md', () => {
+//       console.log('done');
+//     });
 
-  }
-});
+//   }
+// });
 

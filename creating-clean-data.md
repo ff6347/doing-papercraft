@@ -1,3 +1,9 @@
+---
+layout: default
+title: Creating Plans in a Vector Editor
+toc: 123dmake-toc.md
+---
+
 ## Cleaning Plans in Vector Editor  
 
 After modeling our object in Blender and exporting it with the [Paper Model Add-on](paper-model-add-on) we have a .svg file. If we did the additional step with 123DMake we have a .eps file. Both can be edited in vector editors. For the best result we need to clean up the data a bit more in vector editing application. We will use Adobe Illustrator (Mac, Win) for this. If you don't have a license for illustrator you can also use Inkscape (Cross Platform) or Affinity Designer (Mac).  

@@ -1,3 +1,9 @@
+---
+layout: default
+title: Laser
+toc: laser-toc.md
+---
+
 ## Laser  
 
 

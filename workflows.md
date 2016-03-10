@@ -1,3 +1,8 @@
+---
+layout: default
+title: Workflows
+toc: workflows-toc.md
+---
 
 ## Workflows  
 

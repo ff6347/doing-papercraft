@@ -1,3 +1,9 @@
+---
+layout: default
+title: Links
+toc: links-toc.md
+---
+
 ## Links  
 
 [www.tamasoft.co.jp/pepakura-en](http://www.tamasoft.co.jp/pepakura-en/productinfo/index.html)

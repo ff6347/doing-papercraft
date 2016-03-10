@@ -1,3 +1,9 @@
+---
+layout: default
+title: Autodesk 123DMake
+toc: 123dmake-toc.md
+---
+
 ## Autodesk 123DMake
 
 When you are done with creating a simple 3D object either by using [Blender]({{blender.html | prepend: site.basurl}}) or with [Processing]({{processing.org.html | prepend: site.baseurl}}) you can move on to [Autodesks 123DMake](http://www.123dapp.com/make). Allows creation of low-tech LOM-style (Laminated object manufacturing) solid models. The application has several construction techniques for now we will only focus on creating [Folded Panels](#folded-panels).  
@@ -53,7 +59,7 @@ What's more important is to set the "Thickness" of your material. This will dete
 
 When you done with setting up your material choose from the Construction Techniques "Folded Panels".  
 
-#####Optimize Panels - Add Remove Seams
+##### Optimize Panels - Add Remove Seams
 
 If you still want to edit your model you can adjust the count of vertices in these panels or add new seams to your object. You can also split all panels for the final cut plan.  
 

@@ -1,14 +1,10 @@
 [
-"md/header.md",
-"md/intro.md",
-"md/toc.md",
-"md/prerequisites.md",
-"md/workflows.md",
-"md/blender.md",
-"md/processing.org.md",
-"md/123dmake.md",
-"md/paperkura.md",
-"md/creating-clean-data.md",
-"md/laser.md",
-"md/links.md"
+{"source":"workflows.md","title":"Workflows","url":"workflows.html"},
+{"source":"blender.md","title":"Blender","url":"blender.html"},
+{"source":"processing.org.md","title":"Processing.org","url":"processing.org.html"},
+{"source":"123dmake.md","title":"123DMake","url":"123dmake.html"},
+{"source":"paperkura.md","title":"Paperkura","url":"paperkura.html"},
+{"source":"creating-clean-data.md","title":"Creating Plans in a Vector Editor","url":"creating-clean-data.html"},
+{"source":"laser.md","title":"Laser","url":"laser.html"},
+{"source":"links.md","title":"Links","url":"links.html"}
 ]
