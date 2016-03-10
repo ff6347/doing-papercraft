@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "less": "./node_modules/.bin/watch-less -d ./less -r ./css",
-    "combine": "babel-node ./bin/combine.js"
+    "combine": "babel-node ./bin/combine.js",
+    "tocs": "babel-node ./bin/tocs.js"
   },
   "keywords": [],
   "author": "Fabian 'fabiantheblind' Morón Zirfas <fabian.moron.zirfas@gmail.com> (http://fabianmoronzirfas.me)",

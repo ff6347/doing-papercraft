@@ -3,7 +3,7 @@ const fs = require('fs');
 const concat = require('concat-files');
 const toc = require('markdown-toc');
 let data = require('../_data/meta.json');
-let table = '';
+let table = '<div id="toc-head">Table of Contents</div>\n';
 
 for (let i = 0; i < data.length; i++) {
   data[i] = './' + data[i];

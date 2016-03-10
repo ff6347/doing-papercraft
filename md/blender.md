@@ -4,6 +4,9 @@
 >Blender is a professional free and open-source 3D computer graphics software product used for creating animated films, visual effects, art, 3D printed models, interactive 3D applications and video games. Blender's features include 3D modeling, UV unwrapping, texturing, raster graphics editing, rigging and skinning, fluid and smoke simulation, particle simulation, soft body simulation, sculpting, animating, match moving, camera tracking, rendering, video editing and compositing. Alongside the modeling features it also has an integrated game engine.  
 >[From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Blender_\(software\)).  
 
+### Why Blender
+
+We mainly use Blender because it is a powerful open source 3D application. If you already familiar with Blender or know other 3D applications you can skip this part and move on to the [Autodesk 123DMake section](#autodesk-123dmake) or export your plans directly from Blender using the [Paper Model Add-on](#paper-model-add-on).
 
 ### Shortcuts  
 
@@ -20,7 +23,7 @@ Another quick way to call actions open panels is the "Search Menu". It gives you
 Go to: File > User Preferences… and select the "Input" tab.  
 
 - Change the Mouse selection from right click to left click in the settings > input tab
-- emulate Numpad (if you're on a laptop you can use the numbers instead of the numpad)
+- "Emulate Numpad" (if you're on a laptop you can use the numbers instead of the numpad)
 - adjust UI colors in the theme tab (if you like it more fancy)  
 
 You need to hit __"Save User Settings"__ at the bottom of the window to apply these changes. 

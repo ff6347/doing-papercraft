@@ -2,32 +2,34 @@
 layout: default
 title: Doing Papercraft
 ---
-doing papercraft
+Doing Papercraft
 ================
+
+![images/unfold.gif](images/unfold.gif)  
 
 ## Introduction  
 
-This repository is a write-down for an upcoming workshop @ the University of Applied Sciences Potsdam (Germany). We will explore the minimal basics of the 3D application Blender to create some primitive shapes. These shapes will then be unfolded for laser cutting. It is a walkthrough of some possible workflows. We will focus on using Blender and exporting 3D data from it. If you already know other 3D applications you can skip Blender and move on to the [Unfolding](#unfolding) section. _This is still work in progress, there might be_ 🐛_,_ 🐉 _and_ 👾_._
+This document is a write-down for a workshop @ the University of Applied Sciences Potsdam (Germany) as part of the seminar ["Datenobjekte"](https://incom.org/workspace/6569) (data objects) by [Professor Boris Müller](https://incom.org/profil/99) (a.k.a [@borism](https://twitter.com/borism) on Twitter). We will explore the minimal basics of the 3D application Blender to create primitive shapes which will then be unfolded for laser cutting. _This is still work in progress, there might be_ 🐛_,_ 🐉 _and_ 👾_._  
 
-## Prerequisites  
+This document is split into several sub pages for an easier overview.  
 
-- a computer
-- a 3 button mouse
-- Blender (or another 3D application if you already know how to model in 3D)
-- 123DMake 
-- Vector Editor (Illustrator, Inkscape, Affinity Designer)  
-- Processing (optional)
 
-- [doing papercraft](#doing-papercraft)
+{% for item in site.data.meta %}
+    - {{item}}
+{% endfor %}
+
+<div id="toc-head">Table of Contents</div>
+- [Doing Papercraft](#doing-papercraft)
   * [Introduction](#introduction)
-  * [Prerequisites](#prerequisites)
 
+- [Prerequisites](#prerequisites)
 - [Workflows](#workflows)
   * [Workflow 123DMake](#workflow-123dmake)
   * [Workflow Paperkura](#workflow-paperkura)
   * [Workflow dxf2papercraft](#workflow-dxf2papercraft)
   * [Workflow Processing](#workflow-processing)
 - [Application Blender 3D](#application-blender-3d)
+  * [Why Blender](#why-blender)
   * [Shortcuts](#shortcuts)
   * [Search Menu](#search-menu)
   * [Interface](#interface)
@@ -79,7 +81,7 @@ This repository is a write-down for an upcoming workshop @ the University of App
     + [Using Adobe Illustrator](#using-adobe-illustrator)
       - [Usage Hints](#usage-hints)
       - [Plans from 123DMake](#plans-from-123dmake)
-      - [Plans from the Paper Model Add-on](#plans-from-the-paper-model-add-on)
+      - [Plans from the Blender Paper Model Add-on](#plans-from-the-blender-paper-model-add-on)
       - [Using Inkscape](#using-inkscape)
   * [Export DXF](#export-dxf)
 - [Laser](#laser)
@@ -88,8 +90,19 @@ This repository is a write-down for an upcoming workshop @ the University of App
   * [References](#references)
   * [Tutorials](#tutorials)
   * [Other experimental papercraft tools](#other-experimental-papercraft-tools)
-## Workflows  
 
+## Prerequisites  
+
+- a computer
+- a 3 button mouse
+- Blender (or another 3D application if you already know how to model in 3D)
+- 123DMake 
+- Vector Editor (Illustrator, Inkscape, Affinity Designer)  
+- Processing  
+
+Some of these are optional. Depending on which workflow you are going to use.  
+
+## Workflows  
 
 ### Workflow 123DMake  
 
@@ -118,6 +131,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 >Blender is a professional free and open-source 3D computer graphics software product used for creating animated films, visual effects, art, 3D printed models, interactive 3D applications and video games. Blender's features include 3D modeling, UV unwrapping, texturing, raster graphics editing, rigging and skinning, fluid and smoke simulation, particle simulation, soft body simulation, sculpting, animating, match moving, camera tracking, rendering, video editing and compositing. Alongside the modeling features it also has an integrated game engine.  
 >[From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Blender_\(software\)).  
 
+### Why Blender
+
+We mainly use Blender because it is a powerful open source 3D application. If you already familiar with Blender or know other 3D applications you can skip this part and move on to the [Autodesk 123DMake section](#autodesk-123dmake) or export your plans directly from Blender using the [Paper Model Add-on](#paper-model-add-on).
 
 ### Shortcuts  
 
@@ -134,7 +150,7 @@ Another quick way to call actions open panels is the "Search Menu". It gives you
 Go to: File > User Preferences… and select the "Input" tab.  
 
 - Change the Mouse selection from right click to left click in the settings > input tab
-- emulate Numpad (if you're on a laptop you can use the numbers instead of the numpad)
+- "Emulate Numpad" (if you're on a laptop you can use the numbers instead of the numpad)
 - adjust UI colors in the theme tab (if you like it more fancy)  
 
 You need to hit __"Save User Settings"__ at the bottom of the window to apply these changes. 
@@ -715,20 +731,24 @@ On the images above you already can see the laid out plans. These can be accesse
 
 ## Cleaning Plans in Vector Editor  
 
-After modeling our object in Blender and exporting it with the [Paper Model Add-on](paper-model-add-on) we have a .svg file. If we did the additional step with 123DMake we have a .eps file. Both can be edited in vector editors. For the best result we need to clean up the data a bit more in vector editing application. We will use Adobe Illustrator (Mac, Win) for this. If you don't habe a license for illustrator you can also use Inkscape (Cross Platform) or Affinity Designer (Mac).  
+After modeling our object in Blender and exporting it with the [Paper Model Add-on](paper-model-add-on) we have a .svg file. If we did the additional step with 123DMake we have a .eps file. Both can be edited in vector editors. For the best result we need to clean up the data a bit more in vector editing application. We will use Adobe Illustrator (Mac, Win) for this. If you don't have a license for illustrator you can also use Inkscape (Cross Platform) or Affinity Designer (Mac).  
+
 
 #### Using Adobe Illustrator  
 
-Open your svg or eps, set the units of the document to mm (⌘ + ⇧ + p) and set your artboard size to match the size of your material (can be accesed through the Artboard tool or directly from the document settings). To see what the laser will use you should take a look at the "Path View". You can switch back and forth between the visual view and the path view by hitting ⌘ + y on your keyboard. 
+Open your svg or eps, set the units of the document to millimeters (⌘ + ⇧ + p) and set your artboard size to match the size of your material (can be accessed through the Artboard tool or directly from the document settings). To see what the laser will use you should take a look at the "Path View". You can switch back and forth between the visual view and the path view by hitting ⌘ + y on your keyboard. 
 
 ##### Usage Hints  
 
-- Using the path view is often much simpler
-- you can select objects by color using the selection menue
+- Using the path view is often much simpler. This is what the Sabeko laser software sees.   
+- Different colors produce separated layers in the Sabeko laser software.  
+- You can select objects by color using the selection menu.  
+- For additional information on your cut plan you can use the [Monoline Text Drawing Script](https://forums.adobe.com/message/4907404)  
+- To create real dashed single line paths use [this trick](https://forums.adobe.com/message/3657306) from the Adobe forums.  
 
 ##### Plans from 123DMake  
 
-When you used 123DMake you can see you have the some numbers on the plan and, if not splitted into panels, also some folding marks. We can cut those with a low setting to have some visal hints where to fold our model. To do so you need to give them a different color then the outer form we want to cut out. The laser cutter application will detect that and allow us to engrave them with lower power. Release all groups and compound paths if needed. Sort them by color. Remove all unwanted data.  
+When you used 123DMake you can see you have the some numbers on the plan and, if not splitted into panels, also some folding marks. We can cut those with a low setting to have some visual hints where to fold our model. To do so you need to give them a different color then the outer form we want to cut out. The laser cutter application will detect that and allow us to engrave them with lower power. Release all groups and compound paths if needed. Sort them by color. Remove all unwanted data.  
 One important step is to remove the most outer path. This is an outer bound created when exporting the .eps. If we don't do this it will be cutted by the laser. Your final plans should look like the pictures below.  
 
 ![images/illustrator-123dmake-normal-view.png](images/illustrator-123dmake-normal-view.png)  
@@ -738,15 +758,32 @@ One important step is to remove the most outer path. This is an outer bound crea
 ![images/illustrator-123dmake-split-panels-normal-view.png](images/illustrator-123dmake-split-panels-normal-view.png)  
 ![images/illustrator-123dmake-split-panels-path-view.png](images/illustrator-123dmake-split-panels-path-view.png)  
 
-##### Plans from the Paper Model Add-on  
+##### Plans from the Blender Paper Model Add-on  
+
+The size settings from the Paper Model Add-on within Blender are not that intuitive. It is easier export it to something like a A3 paper size and then rescale the model to fit your needs. On the image below you see once the export from blender (the .svg) and on the second and third image the cleaned version in normal and path view. You will need to convert the dotted lines to real paths or it will be a straight cut. Remove all unwanted paths and split them with colors so the laser software can detect them as own layers.  
+
+![images/illustrator-paper-model-add-on-export.png](images/illustrator-paper-model-add-on-export.png)  
+![images/illustrator-paper-model-add-on-normal-view.png](images/illustrator-paper-model-add-on-normal-view.png)  
+![images/illustrator-paper-model-add-on-path-view.png](images/illustrator-paper-model-add-on-path-view.png)  
 
 
 ##### Using Inkscape  
 
+The same principles as in Illustrator apply to Inkscape.  
+
+- Set the size and units of your document.  
+- Rescale your plan to fit your material.  
+- Remove all unwanted paths.  
+- Separate the paths using colors (if needed).  
+- Take a look at the outline view to see the raw paths.  
+
 ### Export DXF  
 
+When exporting to .dxf files just you need to watch out for the unit conversion and the DXF version number.  
+The laser at the University of Applied Sciences Potsdam (Germany) needs DXF R14 files and the unit scaling should be from one millimeter to one unit. If you already did set your units in the document settings you should be fine. Below you see the export panel from Illustrator and from Inkscape. _Apologize for the localized screenshots._  
 
-
+![images/illustrator-dxf-export.png](images/illustrator-dxf-export.png)  
+![images/inkscape-dxf-export.png](images/inkscape-dxf-export.png)  
 ## Laser  
 
 
