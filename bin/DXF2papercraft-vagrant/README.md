@@ -9,6 +9,6 @@ cd shared-folder
 tar xfz dxf2papercraft_v0.2.tgz
 dxf2papercraft_v0.2/dxf2papercraft_64bit cube.blend.dxf out.dxf
 ```
-you have now a out.dxf file that you can open with Libre Office and export as a pdf for further cleaning.  
+you now have a out.dxf file that you can open with Libre Office and export as a pdf for further cleaning.  
 
 ![](out.png)  
