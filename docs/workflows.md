@@ -27,7 +27,7 @@ Paperkura is paid application dedicated to create plans for paper models. Explor
 
 ### Workflow dxf2papercraft  
 
-This is the hackers way to do that. dxf2papercraft is a command line tool that converts 3D models to 2D plans. We managed to run it in a vagrant box. A sample how to run it is provided.  
+This is the hackers way to do that. dxf2papercraft is a command line tool that converts 3D models to 2D plans. We managed to run it in a vagrant box. A sample how to run it is provided [here](https://github.com/FH-Potsdam/doing-papercraft/tree/master/bin/DXF2papercraft-vagrant).  
 
 - Blender (modeling) ⇒  AutoCAD 3D (dxf)
 - dxf2papercraft ⇒ Export 2D DXF

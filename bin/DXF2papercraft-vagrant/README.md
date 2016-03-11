@@ -2,10 +2,13 @@ Using vagrant to use the [dxf2papercraft](http://dxf2papercraft.sourceforge.net/
 
 run (assuming vagrant is installed):  
 
-    vagrant up
+```shell
+vagrant up
+vagrant ssh
+cd shared-folder
+tar xfz dxf2papercraft_v0.2.tgz
+dxf2papercraft_v0.2/dxf2papercraft_64bit cube.blend.dxf out.dxf
+```
+you have now a out.dxf file that you can open with Libre Office and export as a pdf for further cleaning.  
 
-
-To get the v0.2 release run:  
-
-    curl -O http://downloads.sourceforge.net/project/dxf2papercraft/dxf2papercraft_v0.2.tgz?r=http%3A%2F%2Fdxf2papercraft.sourceforge.net%2F&ts=1456933926&use_mirror=kent
-
+![](out.png)  
