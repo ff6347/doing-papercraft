@@ -1,5 +1,0 @@
-- [Workflows](#workflows)
-  * [Workflow 123DMake](#workflow-123dmake)
-  * [Workflow Paperkura](#workflow-paperkura)
-  * [Workflow dxf2papercraft](#workflow-dxf2papercraft)
-  * [Workflow Processing](#workflow-processing)
