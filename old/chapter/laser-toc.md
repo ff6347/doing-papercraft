@@ -1,2 +1,0 @@
-- [Laser](#laser)
-  * [Materials](#materials)
