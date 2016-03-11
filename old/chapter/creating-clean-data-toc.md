@@ -1,0 +1,7 @@
+- [Cleaning Plans in Vector Editor](#cleaning-plans-in-vector-editor)
+    + [Using Adobe Illustrator](#using-adobe-illustrator)
+      - [Usage Hints](#usage-hints)
+      - [Plans from 123DMake](#plans-from-123dmake)
+      - [Plans from the Blender Paper Model Add-on](#plans-from-the-blender-paper-model-add-on)
+      - [Using Inkscape](#using-inkscape)
+  * [Export DXF](#export-dxf)

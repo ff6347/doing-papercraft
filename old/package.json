@@ -1,0 +1,24 @@
+{
+  "name": "doing-papercraft",
+  "version": "1.0.0",
+  "description": "doing papercraft",
+  "main": "README.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "less": "./node_modules/.bin/watch-less -d ./less -r ./css",
+    "combine": "babel-node ./bin/combine.js",
+    "tocs": "babel-node ./bin/tocs.js"
+  },
+  "keywords": [],
+  "author": "Fabian 'fabiantheblind' Morón Zirfas <fabian.moron.zirfas@gmail.com> (http://fabianmoronzirfas.me)",
+  "license": "ISC",
+  "devDependencies": {
+    "concat-files": "^0.1.0",
+    "markdown-toc": "^0.12.3"
+  },
+  "dependencies": {
+    "github-markdown-css": "^2.2.1",
+    "ungrid": "^1.0.1",
+    "watch-less": "0.0.4"
+  }
+}

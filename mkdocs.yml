@@ -1,0 +1,14 @@
+site_name: Doing Papercraft
+pages:
+- Home: index.md
+- Workflows: workflows.md
+- Blender: blender.md
+- Processing: processing.org.md
+- Creating Clean Plans: creating-clean-data.md
+- Laser: laser.md
+- Links: links.md
+theme: readthedocs
+markdown_extensions:
+    - toc:
+        permalink: True
+        baselevel: 5
