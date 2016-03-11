@@ -1,14 +1,29 @@
 site_name: Doing Papercraft
+# Copyright
+copyright: Copyright (c) 2016 Fabian Morón Zirfas & University of Applied Sciences Potsdam (Germany)
+site_author: Fabian 'fabiantheblind' Morón Zirfas
+repo_url: https://github.com/FH-Potsdam/doing-papercraft
+site_url: http://fh-potsdam.github.io/doing-papercraft/
+repo_name: doing-papercraft
+site_description: This document is a write-down for a workshop @ the University of Applied Sciences Potsdam (Germany) as part of the seminar "Datenobjekte" (data objects) by Professor Boris Müller (a.k.a @borism on Twitter). We will explore the minimal basics of the 3D application Blender to create primitive shapes which will then be unfolded for laser cutting.
+site_favicon: favicon.ico
+
 pages:
 - Home: index.md
 - Workflows: workflows.md
 - Blender: blender.md
-- Processing: processing.org.md
+- Processing: processing.md
+- 123DMake: 123dmake.md
 - Creating Clean Plans: creating-clean-data.md
 - Laser: laser.md
 - Links: links.md
 theme: readthedocs
+extra_css: [extra.css]
+extra:
+  version: '0.1.0'
 markdown_extensions:
-    - toc:
-        permalink: True
-        baselevel: 5
+  - toc:
+      permalink: True
+      baselevel: 5
+  - smarty
+  - admonition

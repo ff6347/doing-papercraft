@@ -1,13 +1,7 @@
----
-title: Doing Papercraft
-layout: default
-toc: toc.md
----
-
 Doing Papercraft
 ================
 
-![images/unfold.gif](images/unfold.gif)  
+[![images/unfold.gif](images/unfold.gif)](images/unfold.gif)  
 
 ## Introduction  
 
@@ -24,4 +18,5 @@ This document is a write-down for a workshop @ the University of Applied Science
 - Vector Editor (Illustrator, Inkscape, Affinity Designer)  
 - Processing  
 
-Some of these are optional. Depending on which workflow you are going to use.  
+!!!note
+    Some of these are optional. Depending on which workflow you are going to use.  
