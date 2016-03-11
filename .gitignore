@@ -3,3 +3,4 @@ papercraft/
 .vagrant
 _site/
 .DS_Store
+site/
