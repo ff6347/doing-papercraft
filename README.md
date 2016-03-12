@@ -7,7 +7,7 @@ This repository is a write-down for an upcoming workshop @ the University of App
 
 Build with [mkdocs](http://www.mkdocs.org/).  
 
- Copyright (c) 2016 Fabian Moron Zirfas & University of Applied Sciences Potsdam (Germany)
+Copyright (c) 2016 Fabian Moron Zirfas & University of Applied Sciences Potsdam (Germany)
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.  
 
