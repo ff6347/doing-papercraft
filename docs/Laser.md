@@ -7,15 +7,18 @@ The Laser at th University of Applied Sciences Potsdam (Germany) is currently su
 
 ### Laser On  
 
-- Open the upper window for the ventilation.
-- Switch on the master switch on the backside. 
+- Open the upper window for the ventilation.  
+- Switch on the master switch on the backside.  
+- Switch on the ventilation.  
 - Check if there is no material within the cutting area. 
 - Check if there is enough room between the distance pushbutton, the laser head and the table.
 - Put the keys into the according holes.  
 - Is the security switch up?  
 
 !!!warning
-    The laser does a reference run into the upper right corner. If there is any material in the way you could damage the laser head.   
+    The laser does a reference run into the upper right corner. If there is any material in the way you could damage the laser head. When switching on keep one hand over the emergency switch to shut down everything. Just to be safe.   
+
+- Turn the lower key to turn on the laser.  
 
 ### Setup the Focus
 
