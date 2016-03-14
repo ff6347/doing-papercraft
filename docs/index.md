@@ -20,3 +20,7 @@ This document is a write-down for a workshop by [Fabian Morón Zirfas](https://g
 
 !!!note
     Some of these are optional. Depending on which workflow you are going to use.  
+
+## Source  
+
+These docs are written using [mkdocs](http://www.mkdocs.org/) using the [readthedocs](https://readthedocs.org/) theme by Fabian Morón Zirfas with ♥. See the source on [GitHub.](https://github.com/FH-Potsdam/doing-papercraft)  
