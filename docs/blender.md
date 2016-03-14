@@ -1,7 +1,7 @@
 
 ## About Blender 
 
-<img src="images/blender-logo.svg" width=1000 alt="">
+<img src="../images/blender-logo.svg" width=1000 alt="blender logo">
 <!-- ![Blender logo](images/blender-logo.svg)   -->
 
 >Blender is a professional free and open-source 3D computer graphics software product used for creating animated films, visual effects, art, 3D printed models, interactive 3D applications and video games. Blender's features include 3D modeling, UV unwrapping, texturing, raster graphics editing, rigging and skinning, fluid and smoke simulation, particle simulation, soft body simulation, sculpting, animating, match moving, camera tracking, rendering, video editing and compositing. Alongside the modeling features it also has an integrated game engine.  
@@ -207,6 +207,23 @@ Extrudes the current selection. [All Transformation](#transformation) and [Selec
 | :--        | :--                |
 | e          | Extrude Region     |
 | ⌥ + e      | Extrude Individual |
+
+##### (Modeling) Separate  
+
+You might come to the point where you need to separate an object in multiple ones. There is an easy short cut for that. Go into Edit Mode (hit ⇥) and select the faces or vertices you want in an new object and hit __p__. You will be presented with a dialog that allows you to split by:  
+
+| Split Type      | Outcome                                              |
+| :---            | :---                                                 |
+| __Selected__    | This option separates the selection to a new object. |
+| __All Loose Parts__ | Separates the mesh in its unconnected parts.         |
+| __By Material__     | Creates separate mesh objects for each material.     |
+
+Read more [here.](https://www.blender.org/manual/editors/3dview/object/editing.html#separate)  
+
+
+##### (Modeling) Join  
+
+To join selected objects into one single object you can select them all. in __j__. Be aware that they will all be joined into the last selected object. You can see it in the difference in the highlight color. Read more [here.](https://www.blender.org/manual/editors/3dview/object/editing.html#join)
 
 
 ##### (Modeling) Other Manipulations  
