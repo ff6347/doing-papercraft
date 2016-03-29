@@ -22,8 +22,10 @@
 - [Blender Basics - 04 - Animation - YouTube](https://www.youtube.com/watch?v=uj44hGZj3y8)
 - [Blender Basics - 05 - Shading and Lighting - YouTube](https://www.youtube.com/watch?v=fgAySB7DoOc)
 - [Blender Basics - 06 - Rendering - YouTube](https://www.youtube.com/watch?v=nxATPhNL97M)
-
+- [Blender Absolute Beginner Series (2014) - YouTube](https://www.youtube.com/playlist?list=PLrgQj91MOVfjTShOMRY8TLmkJ7OFr7bj6)
 - [Blender Basics course on CGCookie](https://cgcookie.com/course/blender-basics/)  
+- [Create Stunning 3D Art on CGCookie](https://cgcookie.com/learn-blender/)  
+- [Let me Google that for you "Blender Tutorial"](http://bfy.tw/2Kxs)  
 
 ### Other experimental papercraft tools  
 
