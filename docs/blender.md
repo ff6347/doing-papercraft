@@ -155,11 +155,12 @@ The rectangular (hit __r__ before selecting) or circular (hit __c__) selection b
 
 | Action                       | Result                               | Mode             |
 | :---                         | :---                                 | :---             |
+| ⇧ + d                        | duplicates the selected object       | Object/Edit Mode |
 | Left Mouse                   | select                               | Object/Edit Mode |
-| Left Mouse + ⇧           | add/remove                           | Object/Edit Mode |
+| Left Mouse + ⇧               | add/remove                           | Object/Edit Mode |
 | a                            | select all                           | Object/Edit Mode |
-| Ctrl + i                     | invert the current selection         | Object/Edit Mode |
-| Ctrl + Tab                   | selection mode switcher              | Edit Mode        |
+| ^ + i                        | invert the current selection         | Object/Edit Mode |
+| ^ + Tab                      | selection mode switcher              | Edit Mode        |
 | b + left mouse click & drag  | select rectangular area              | Edit Mode        |
 | c + left mouse click & drag  | paint selection area                 | Edit Mode        |
 | c + left mouse + mouse wheel | paint selection increase or decrease | Edit Mode        |
