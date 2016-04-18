@@ -1,7 +1,7 @@
 doing papercraft
 ================
 
-[![Join the chat at https://gitter.im/FH-Potsdam/doing-papercraft](https://badges.gitter.im/FH-Potsdam/doing-papercraft.svg)](https://gitter.im/FH-Potsdam/doing-papercraft?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/FH-Potsdam/doing-papercraft)  
 
 ## Introduction  
 

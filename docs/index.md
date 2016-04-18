@@ -27,7 +27,9 @@ These docs are written by Fabian Morón Zirfas with ♥ using [mkdocs](http://ww
 
 ## Contribution & Issues
 
-Please file any issues [here](https://github.com/FH-Potsdam/doing-papercraft/issues) on GitHub. Contributions and Pull Requests are welcome.  
+Please file any issues [here](https://github.com/FH-Potsdam/doing-papercraft/issues) on GitHub. Contributions and Pull Requests are welcome. For quick questions you can also visit our gitter chat.  
+
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/FH-Potsdam/doing-papercraft)  
 
 ## Creating gifs
 
