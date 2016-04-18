@@ -236,6 +236,10 @@ Read more [here.](https://www.blender.org/manual/editors/3dview/object/editing.h
 
 To join selected objects into one single object you can select them all. in __j__. Be aware that they will all be joined into the last selected object. You can see it in the difference in the highlight color. Read more [here.](https://www.blender.org/manual/editors/3dview/object/editing.html#join)
 
+| Key/Action | Result                                                   |
+| :--        | :--                                                      |
+| ^ + j       | merges all objects into the last selected Active object. |
+
 
 ##### (Modeling) Other Manipulations  
 
