@@ -218,9 +218,14 @@ Extrudes the current selection. [All Transformation](#transformation) and [Selec
 
 You might come to the point where you need to separate an object in multiple ones. There is an easy short cut for that. Go into Edit Mode (hit ⇥) and select the faces or vertices you want in an new object and hit __p__. You will be presented with a dialog that allows you to split by:  
 
-| Split Type      | Outcome                                              |
-| :---            | :---                                                 |
-| __Selected__    | This option separates the selection to a new object. |
+| Key/Action | Result                      |
+| :--        | :--                         |
+| p          | brings up the separate menu |
+
+
+| Split Type          | Outcome                                              |
+| :---                | :---                                                 |
+| __Selected__        | This option separates the selection to a new object. |
 | __All Loose Parts__ | Separates the mesh in its unconnected parts.         |
 | __By Material__     | Creates separate mesh objects for each material.     |
 
