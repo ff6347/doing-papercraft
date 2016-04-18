@@ -88,27 +88,27 @@ The basic navigation in the 3D view is done with the mouse. You can also change 
 !!!note
     The most useful keys on the numpad are (table also has emulated numpad)
 
-| Key Combo (emulated) | View Change                                | Key Combo       |
-| ----------:          | :----- ----------------------------------- | :----------     |
-| 1                    | Front                                      | Numpad 1        |
-| Ctrl + 1             | Back                                       | Numpad Ctrl + 1 |
-| 3                    | Right                                      | Numpad 3        |
-| Ctrl + 3             | Left                                       | Numpad Ctrl + 3 |
-| 7                    | Top                                        | Numpad 7        |
-| Ctrl + 7             | Bottom                                     | Numpad Ctrl + 7 |
-| 5                    | Toggle orthographic vs perspective mode    | Numpad 5        |
-| 0                    | Camera View                                | Numpad 0        |
-|                      | **Not so important keys**                  | Numpad          |
-| 4                    | Orbit Left                                 | Numpad 4        |
-| Ctrl + 4             | Pan Left                                   | Numpad Ctrl + 4 |
-| 6                    | Orbit Right                                | Numpad 6        |
-| Ctrl + 6             | Pan Right                                  | Numpad Ctrl + 6 |
-| 8                    | Orbit Up                                   | Numpad 8        |
-| Ctrl + 8             | Pan Up                                     | Numpad Ctrl + 8 |
-| 2                    | Oribit Down                                | Numpad 2        |
-| Ctrl + 2             | Pan Down                                   | Numpad Ctrl + 2 |
-| -                    | Zoom Out                                   | Numpad -        |
-|                      | Zoom In (seems not to work)                |                 |
+| Key Combo (emulated) | View Change                                | Key Combo    |
+| ----------:          | :----- ----------------------------------- | :----------  |
+| 1                    | Front                                      | Numpad 1     |
+| ^ + 1                | Back                                       | Numpad ^ + 1 |
+| 3                    | Right                                      | Numpad 3     |
+| ^ + 3                | Left                                       | Numpad ^ + 3 |
+| 7                    | Top                                        | Numpad 7     |
+| ^ + 7                | Bottom                                     | Numpad ^ + 7 |
+| 5                    | Toggle orthographic vs perspective mode    | Numpad 5     |
+| 0                    | Camera View                                | Numpad 0     |
+|                      | **Not so important keys**                  | Numpad       |
+| 4                    | Orbit Left                                 | Numpad 4     |
+| ^ + 4                | Pan Left                                   | Numpad ^ + 4 |
+| 6                    | Orbit Right                                | Numpad 6     |
+| ^ + 6                | Pan Right                                  | Numpad ^ + 6 |
+| 8                    | Orbit Up                                   | Numpad 8     |
+| ^ + 8                | Pan Up                                     | Numpad ^ + 8 |
+| 2                    | Oribit Down                                | Numpad 2     |
+| ^ + 2                | Pan Down                                   | Numpad ^ + 2 |
+| -                    | Zoom Out                                   | Numpad -     |
+|                      | Zoom In (seems not to work)                |              |
 
 ### (UI) Cursor  
 
