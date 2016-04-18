@@ -1,0 +1,24 @@
+{
+  "name": "doing-papercraft",
+  "version": "1.0.0",
+  "description": "doing papercraft a workshop @ University of Applied Sciences Potsdam (Germany)",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve":"mkdocs serve",
+    "deploy":"mkdocs gh-deploy --clean -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FH-Potsdam/doing-papercraft.git"
+  },
+  "keywords": [],
+  "author": "Fabian 'fabiantheblind' Morón Zirfas <fabian.moron.zirfas@gmail.com> (http://fabianmoronzirfas.me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FH-Potsdam/doing-papercraft/issues"
+  },
+  "homepage": "http://fh-potsdam.github.io/doing-papercraft/"
+}
