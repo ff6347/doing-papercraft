@@ -1,6 +1,8 @@
 doing papercraft
 ================
 
+[![Join the chat at https://gitter.im/FH-Potsdam/doing-papercraft](https://badges.gitter.im/FH-Potsdam/doing-papercraft.svg)](https://gitter.im/FH-Potsdam/doing-papercraft?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Introduction  
 
 This repository is a write-down for an upcoming workshop @ the University of Applied Sciences Potsdam (Germany). We will explore the minimal basics of the 3D application Blender to create some primitive shapes. These shapes will then be unfolded for laser cutting. It is a walkthrough of some possible workflows. We will focus on using Blender and exporting 3D data from it. If you already know other 3D applications you can skip Blender and move on to the [Unfolding](#unfolding) section. _This is still work in progress, there might be_ 🐛_,_ 🐉 _and_ 👾_._
