@@ -31,6 +31,9 @@ There are some abbreviation used throughout the docs. See the table below.
 | ⇧            | Shift                |
 | ⌥            | Alt (Option)         |
 | ⌘            | Command (Blumenkohl) |
+| ⌫            | Delete (Backspace)   |
+| ⇥            | Tabulator            |
+
 
 ## Source  
 
