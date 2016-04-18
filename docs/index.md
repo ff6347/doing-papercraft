@@ -21,6 +21,17 @@ This document is a write-down for a workshop by [Fabian Morón Zirfas](https://g
 !!!note
     Some of these are optional. Depending on which workflow you are going to use.  
 
+## Used Abbreviation 
+
+There are some abbreviation used throughout the docs. See the table below.  
+
+| Abbreviation | Meaning              |
+| :---         | :--                  |
+| ^            | Ctrl                 |
+| ⇧            | Shift                |
+| ⌥            | Alt (Option)         |
+| ⌘            | Command (Blumenkohl) |
+
 ## Source  
 
 These docs are written by Fabian Morón Zirfas with ♥ using [mkdocs](http://www.mkdocs.org/) using the [readthedocs](https://readthedocs.org/) theme. See the source on [GitHub.](https://github.com/FH-Potsdam/doing-papercraft).  

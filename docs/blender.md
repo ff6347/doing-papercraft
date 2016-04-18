@@ -238,7 +238,7 @@ To join selected objects into one single object you can select them all. in __j_
 
 | Key/Action | Result                                                   |
 | :--        | :--                                                      |
-| ^ + j       | merges all objects into the last selected Active object. |
+| ^ + j      | merges all objects into the last selected Active object. |
 
 
 ##### (Modeling) Other Manipulations  
