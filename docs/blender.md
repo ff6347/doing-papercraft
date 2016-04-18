@@ -144,18 +144,14 @@ To delete the selection hit __x__ this applies for Edit- and Object Mode. In Edi
 ### (Modeling) Making Selections  
 
 To select objects use the left mouse click (if set to left selection. The default is right selection). You can add or remove objects to or from the selection by holding __⇧__. Selected objects are highlighted in orange (default theme). The first in the order of selected objects is a bit brighter. You can also select everything by hitting __a__. In "Edit Mode" there are some extra options for selecting things. You can switch between vertices, edges and faces selection and you can combine them with the buttons on the bar below the 3D view. 
+Ther are also other selection modes. The rectangular (key __r__ ) or circular (key __c__) selection allows to select  by clicking and dragging. This only applies to the visible objects, vertices, edges and faces. You can change this behavior if you want to selection to apply to non visible objects as well. There are even more options for selecting. Like Inverting selections and so on. See [the Blender Manual](https://www.blender.org/manual/modeling/meshes/selecting/introduction.html#selection-mode)  
 
 [![selection-modes.png](images/selection-modes.png)](images/selection-modes.png)  
 
-##### (Modeling) Duplication
-
-To duplicate the current selection (in edit or object mode) just hit __⇧ + d__. This also sets the newly created objects into grab mode so you can set their new position. All the [Transformation](#transformation) rules apply.  
-The rectangular (hit __r__ before selecting) or circular (hit __c__) selection by clicking and dragging only applies to the visible objects, vertices, edges and faces by default you can change this if you want. There are more options for selecting. Like Inverting selections and so on. See [the Blender Manual](https://www.blender.org/manual/modeling/meshes/selecting/introduction.html#selection-mode)  
 
 
 | Action                       | Result                               | Mode             |
 | :---                         | :---                                 | :---             |
-| ⇧ + d                        | duplicates the selected object       | Object/Edit Mode |
 | Left Mouse                   | select                               | Object/Edit Mode |
 | Left Mouse + ⇧               | add/remove                           | Object/Edit Mode |
 | a                            | select all                           | Object/Edit Mode |
@@ -168,15 +164,23 @@ The rectangular (hit __r__ before selecting) or circular (hit __c__) selection b
 
 [![blender-ui-sel.gif](images/blender-ui-sel.gif)](images/blender-ui-sel.gif)  
 
-##### (Modeling) Using Manipulators
+##### (Modeling) Duplication
+
+To duplicate the current selection (in edit or object mode) just hit __⇧ + d__. This also sets the newly created objects into grab mode so you can set their new position. All the [Transformation](#transformation) rules apply.  
+
+| Action                       | Result                               | Mode             |
+| :---                         | :---                                 | :---             |
+| ⇧ + d                        | duplicates the selected object       | Object/Edit Mode |
+
+##### (Modeling) Transformation Using Manipulators
 
 You can transform objects, groups, vertices, edges and faces (i.e. your selection) by using the 3D manipulators. Change between grab, rotate and scale mode on the bottom of the 3D view. You can combine them or shut them off totally. If you click and drag into the circle at the centre of the manipulator you transform on all axis at once.  
 
 [![manipulation.gif](images/manipulation.gif)](images/manipulation.gif)  
 
-##### (Modeling) Using Hotkeys  
+##### (Modeling) Transformation Using Hotkeys  
 
-Sometimes it is even more convenient to use the hotkeys. When using the hotkeys you can easily constrain the manipulation to an axis. Just hit for example __g + x__ to only move the selection on the global x-axis. If you hit __x__ twice you transform on the objects local axis. The second transformation corresponds with the pull down next to the manipulator buttons on the button of the view. Read some more about the manipulators [here](https://www.blender.org/manual/editors/3dview/transform/transform_control/manipulators.html).   
+Sometimes it is more convenient to use the hotkeys. When using the hotkeys you can easily constrain the manipulation to an axis. Just hit for example __g + x__ to only move the selection on the global x-axis. If you hit __x__ twice you transform on the objects local axis. The second transformation corresponds with the pull down next to the manipulator buttons on the button of the view. Read some more about the manipulators [here](https://www.blender.org/manual/editors/3dview/transform/transform_control/manipulators.html).   
 
 | Key            | manipulation                                                  |
 | :---           | :---                                                          |
