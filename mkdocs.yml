@@ -16,6 +16,7 @@ pages:
 - 123DMake: 123dmake.md
 - Creating Clean Plans: creating-clean-data.md
 - Laser: laser.md
+- Gallery: gallery.md
 - Links: links.md
 theme: readthedocs
 extra_css: [extra.css]
