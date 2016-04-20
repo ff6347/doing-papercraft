@@ -1,4 +1,4 @@
-These are some process and results images from the workshop.  
+These are some process and result images from the workshop.  
 
 Images taken by Anna, Samira, Amelie, Jonathan, Merle, Ron, Mario, Philipp, Thomas, Tito, Roman, Stephane and Katja.  
 
