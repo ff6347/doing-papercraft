@@ -3,6 +3,9 @@ Doing Papercraft
 
 [![images/unfold.gif](images/unfold.gif)](images/unfold.gif)  
 
+!!!note
+    [123DMake was discontinued](http://www.123dapp.com/) and is now replaced by [Slicer for Fusion 360](https://apps.autodesk.com/FUSION/en/Detail/Index?id=8699194120463301363&os=Win64&appLang=en). It is in fact the same application. We will update the docs accordingly.  
+
 ## Introduction  
 
 This document is a write-down for a workshop by [Fabian Morón Zirfas](https://github.com/fabiantheblind) @ [the University of Applied Sciences Potsdam (Germany)](http://www.fh-potsdam.de/) as part of the seminar ["Datenobjekte"](https://incom.org/workspace/6569) (data objects) by [Professor Boris Müller](https://incom.org/profil/99) (a.k.a [@borism](https://twitter.com/borism) on Twitter). We will explore the minimal basics of the 3D application Blender to create primitive shapes which will then be unfolded using 123DMake for laser cutting. _This is still work in progress, there might be_ 🐛_,_ 🐉 _and_ 👾_._  

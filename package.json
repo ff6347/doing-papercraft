@@ -7,8 +7,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve":"mkdocs serve",
-    "deploy":"mkdocs gh-deploy --clean -v"
+    "serve": "mkdocs serve",
+    "deploy": "mkdocs gh-deploy --clean -v"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/FH-Potsdam/doing-papercraft/issues"
   },
-  "homepage": "http://fh-potsdam.github.io/doing-papercraft/"
+  "homepage": "http://fh-potsdam.github.io/doing-papercraft/",
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
