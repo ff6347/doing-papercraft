@@ -25,7 +25,7 @@ One important step is to remove the most outer path (it is a rectangle). This is
 
 
 [![images/illustrator-123dmake-normal-view.png](images/illustrator-123dmake-normal-view.png)](images/illustrator-123dmake-normal-view.png)  
-_Plan from 123DMake in normal view, separated by color_
+_Plan from Slicer in normal view, separated by color_
 
 
 [![images/illustrator-123dmake-plan-pathview.png](images/illustrator-123dmake-plan-pathview.png)](images/illustrator-123dmake-plan-pathview.png)  
