@@ -1,6 +1,6 @@
 site_name: Doing Papercraft
 # Copyright
-copyright: Copyright (c) 2016 Fabian Morón Zirfas & University of Applied Sciences Potsdam (Germany). Please report any issue <a href="https://github.com/FH-Potsdam/doing-papercraft/issues">here</a> on GitHub.
+copyright: Licensed under MIT License. Copyright (c) 2016 - 2017 Fabian Morón Zirfas & University of Applied Sciences Potsdam (Germany). Please report any issue <a href="https://github.com/FH-Potsdam/doing-papercraft/issues">here</a> on GitHub.
 site_author: Fabian 'fabiantheblind' Morón Zirfas
 repo_url: https://github.com/FH-Potsdam/doing-papercraft
 site_url: http://fh-potsdam.github.io/doing-papercraft/
@@ -13,7 +13,7 @@ pages:
 - Workflows: workflows.md
 - Blender: blender.md
 - Processing: processing.md
-- 123DMake: 123dmake.md
+- Slicer for Fusion 360: slicer.md
 - Creating Clean Plans: creating-clean-data.md
 - Laser: laser.md
 - Gallery: gallery.md

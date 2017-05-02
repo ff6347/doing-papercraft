@@ -1,11 +1,11 @@
-There are several different workflows to create data the laser can read. We will concentrate for now on using Blender with Autodesks 123DMake. There are other applications that can produce similar results.  
+There are several different workflows to create data the laser can read. We will concentrate for now on using Blender with Autodesks Slicer. There are other applications that can produce similar results.  
 
-### Workflow 123DMake  
+### Workflow Slicer  
 
 This is the most straight forward way. There is no knowledge of programming needed and all the tools used are open source and free except for Adobe Illustrator what can be substituted with Inkscape. The learning curve for Blender can be a bit steep but there are tons of good tutorials out there. Take a look at the [Links](links/) for some external references about it.  
 
 - Blender (modeling) ⇒ Export Wavefront (obj) or Binary/ASCII STL (stl) 
-- 123DMake (unfolding) ⇒ Export PDF or EPS  
+- Slicer (unfolding) ⇒ Export PDF or EPS  
 - Illustrator/Inkscape (clean up) ⇒ Export DXF R14   
 
 ### Workflow Processing  
@@ -14,7 +14,7 @@ Using Processing to create 3D data can be a bit tricky. You will need some knowl
 
 - Processing ⇒ Export OBJ
 - Blender (clean up) ⇒ Export Wavefront (obj) or Binary/ASCII STL (stl)
-- 123DMake (unfolding) ⇒ Export PDF or EPS  
+- Slicer (unfolding) ⇒ Export PDF or EPS  
 - Illustrator/Inkscape (clean up) ⇒ Export DXF R14  
 
 ### Workflow Paperkura  

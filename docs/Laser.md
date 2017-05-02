@@ -16,7 +16,7 @@ The Laser at th University of Applied Sciences Potsdam (Germany) is currently su
 - Is the security switch up?  
 
 !!!warning
-    The laser does a reference run into the upper right corner. If there is any material in the way you could damage the laser head. When switching on keep one hand over the emergency switch to shut down everything. Just to be safe.   
+    The laser does a reference run into the upper right corner. If there is any material in the way you could damage the laser head. If the distance pushbutton is lower then the grid you also will damage the laser. When switching on keep one hand over the emergency switch to shut down everything. Just to be safe.   
 
 - Turn the lower key to turn on the laser.  
 
@@ -57,7 +57,7 @@ The Laser at th University of Applied Sciences Potsdam (Germany) is currently su
 
 ### Materials  
 
-This is a list of already tested materials for cutting. You always should have some spare material for adjusting the power settings of laser.  
+This is a just short list of already tested materials for cutting. You always should have some spare material for adjusting the power and speed settings of laser.  
 
 | Materials            | max. (tested) thickness | slot offset | comment                                 |
 | :--                  | :---                    | :---        | :--                                     |

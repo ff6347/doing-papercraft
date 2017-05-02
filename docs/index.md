@@ -17,7 +17,7 @@ This document is a write-down for a workshop by [Fabian Morón Zirfas](https://g
 - a computer
 - a 3 button mouse
 - Blender (or another 3D application if you already know how to model in 3D)
-- 123DMake 
+- Slicer for Fusion 360 
 - Vector Editor (Illustrator, Inkscape, Affinity Designer)  
 - Processing  
 
@@ -45,8 +45,6 @@ These docs are written by Fabian Morón Zirfas with ♥ using [mkdocs](http://ww
 ## Contribution & Issues
 
 Please file any issues [here](https://github.com/FH-Potsdam/doing-papercraft/issues) on GitHub. Contributions and Pull Requests are welcome. For quick questions you can also visit our gitter chat.  
-
-[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/FH-Potsdam/doing-papercraft)  
 
 ## Creating gifs
 

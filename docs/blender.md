@@ -8,7 +8,7 @@
 >Blender is a professional free and open-source 3D computer graphics software product used for creating animated films, visual effects, art, 3D printed models, interactive 3D applications and video games. Blender's features include 3D modeling, UV unwrapping, texturing, raster graphics editing, rigging and skinning, fluid and smoke simulation, particle simulation, soft body simulation, sculpting, animating, match moving, camera tracking, rendering, video editing and compositing. Alongside the modeling features it also has an integrated game engine.  
 >[From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Blender_\(software\)).  
 
-We use [Blender](https://www.blender.org/) because it is a powerful open source, free of charge 3D application. It has a broad user base and a excellent [reference.](https://www.blender.org/manual/contents.html#) If you are already familiar with Blender, or know other 3D applications like Maya, C4D, Rhino, 3ds Max, or or or, you can skip this part and move on to the [Autodesk 123DMake section](123dmake/) or export your plans directly from within Blender using the [Paper Model Add-on](#paper-model-add-on).
+We use [Blender](https://www.blender.org/) because it is a powerful open source, free of charge 3D application. It has a broad user base and a excellent [reference.](https://www.blender.org/manual/contents.html#) If you are already familiar with Blender, or know other 3D applications like Maya, C4D, Rhino, 3ds Max, or or or, you can skip this part and move on to the [Slicer section](slicer/) or export your plans directly from within Blender using the [Paper Model Add-on](#paper-model-add-on).
 
 ### (UI) Shortcuts  
 
@@ -346,7 +346,7 @@ Both are pretty self-explanatory. The Paper Model Add-on adds under File > Expor
 
 ### Export  
 
-To export our data we can use different options. For one we can use the Paper Model Add-on]. Then we have a vector graphic we just have to clean up and convert to [DXF](https://en.wikipedia.org/wiki/AutoCAD_DXF) to use it for laser cutting. If this is your chosen workflow, move on to [Creating Clean Plans](#creating-clean-data). If you want to use 123DMake or Paperkura you need to use an interchange format like [STL](https://en.wikipedia.org/wiki/STL_\(file_format\)) or [OBJ](https://en.wikipedia.org/wiki/Wavefront_.obj_file). You don't need to specify a final scaling. 123DMake and Paperkura both allow to edit the scaling of the Model and the material/paper size.  
+To export our data we can use different options. For one we can use the Paper Model Add-on]. Then we have a vector graphic we just have to clean up and convert to [DXF](https://en.wikipedia.org/wiki/AutoCAD_DXF) to use it for laser cutting. If this is your chosen workflow, move on to [Creating Clean Plans](#creating-clean-data). If you want to use Slicer or Paperkura you need to use an interchange format like [STL](https://en.wikipedia.org/wiki/STL_\(file_format\)) or [OBJ](https://en.wikipedia.org/wiki/Wavefront_.obj_file). You don't need to specify a final scaling. Slicer and Paperkura both allow to edit the scaling of the Model and the material/paper size.  
 
 
 ##### (Export) STL STereoLithography

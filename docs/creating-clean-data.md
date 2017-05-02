@@ -1,5 +1,5 @@
 
-After modeling our object in Blender and exporting it with the [Paper Model Add-on](paper-model-add-on) we have a .svg file. If we did the additional step with 123DMake we have a .eps file. Both can be edited in vector editors. For the best result we need to clean up the data a bit more. We will use Adobe Illustrator (Mac, Win) for this.  
+After modeling our object in Blender and exporting it with the [Paper Model Add-on](paper-model-add-on) we have a .svg file. If we did the additional step with Slicer we have a .eps file. Both can be edited in vector editors. For the best result we need to clean up the data a bit more. We will use Adobe Illustrator (Mac, Win) for this.  
 
 !!!hint
     If you don't have a license for Illustrator you can also use Inkscape (Cross Platform) or Affinity Designer (Mac).  
@@ -17,9 +17,9 @@ Open your svg or eps, set the units of the document to millimeters (⌘ + ⇧ + 
     - __Create additional marks for folding and assembly.__ For additional information on your cut plan you can use the [Monoline Text Drawing Script.](https://forums.adobe.com/message/4907404)  
     - __Dashed lines are not really dashed.__ To create real dashed single line paths use [this trick](https://forums.adobe.com/message/3657306) from the Adobe forums.  
 
-##### Plans from 123DMake  
+##### Plans from Slicer  
 
-If you used 123DMake you have the some numbers on the plan and, if not splitted into panels, also some folding marks. We can engrave those with low power setting to have some visual hints where to fold our model. To do so you need to give them a different color then the outer form which should be cutted. The laser cutter application will detect colors and allow us to apply quickly different settings. Release all groups and compound paths if needed. Sort them by color. Remove all unwanted information.  
+If you used Slicer you have the some numbers on the plan and, if not splitted into panels, also some folding marks. We can engrave those with low power setting to have some visual hints where to fold our model. To do so you need to give them a different color then the outer form which should be cutted. The laser cutter application will detect colors and allow us to apply quickly different settings. Release all groups and compound paths if needed. Sort them by color. Remove all unwanted information.  
 One important step is to remove the most outer path (it is a rectangle). This is an outer bound created when exporting the .eps file. If we don't do this it will be cutted by the laser. Your final plans should look like the pictures below.  
 
 
@@ -29,14 +29,14 @@ _Plan from 123DMake in normal view, separated by color_
 
 
 [![images/illustrator-123dmake-plan-pathview.png](images/illustrator-123dmake-plan-pathview.png)](images/illustrator-123dmake-plan-pathview.png)  
-_Plan from 123DMake in path view_
+_Plan from Slicer in path view_
 
 
 [![images/illustrator-123dmake-split-panels-normal-view.png](images/illustrator-123dmake-split-panels-normal-view.png)](images/illustrator-123dmake-split-panels-normal-view.png)  
-_Split Plan from 123DMake in normal view, separated by color_
+_Split Plan from Slicer in normal view, separated by color_
 
 [![images/illustrator-123dmake-split-panels-path-view.png](images/illustrator-123dmake-split-panels-path-view.png)](images/illustrator-123dmake-split-panels-path-view.png)  
-_Split Plan from 123DMake in path view_
+_Split Plan from Slicer in path view_
 
 ##### Plans from the Blender Paper Model Add-on  
 
