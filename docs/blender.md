@@ -10,6 +10,9 @@
 
 We use [Blender](https://www.blender.org/) because it is a powerful open source, free of charge 3D application. It has a broad user base and a excellent [reference.](https://www.blender.org/manual/contents.html#) If you are already familiar with Blender, or know other 3D applications like Maya, C4D, Rhino, 3ds Max, or or or, you can skip this part and move on to the [Slicer section](slicer/) or export your plans directly from within Blender using the [Paper Model Add-on](#paper-model-add-on).
 
+!!!hint
+    You should use a 3 button mouse if you are using a laptop. It makes the handling of Blender way easier.  
+
 ### (UI) Shortcuts  
 
 Blender relies heavily on shortcuts. See an overview of all shortcuts here [waldobronchart.github.io/ShortcutMapper/#Blender](http://waldobronchart.github.io/ShortcutMapper/#Blender). Some shortcuts depend on the position of the mouse e.g. __x__ for deleting only works when the mouse is over the 3D view.  
