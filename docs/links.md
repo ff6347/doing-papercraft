@@ -1,7 +1,7 @@
 ## Links  
 
 - Adobe Illustrator [adobe.com/products/illustrator.html](http://www.adobe.com/products/illustrator.html)
-- Autodesk 123DMake [123dapp.com/make](http://www.123dapp.com/make)
+- Autodesk Slicer for Fusion 360 [Autodesk Slicer](https://apps.autodesk.com/FUSION/en/Detail/Index?id=8699194120463301363&os=Win64&appLang=en)
 - Blender [blender.org](https://www.blender.org/) 
 - dxf2papercraft [dxf2papercraft.sourceforge.net](http://dxf2papercraft.sourceforge.net/)  
 - Inkscape [inkscape.org](https://inkscape.org)

@@ -8,7 +8,7 @@
 >Blender is a professional free and open-source 3D computer graphics software product used for creating animated films, visual effects, art, 3D printed models, interactive 3D applications and video games. Blender's features include 3D modeling, UV unwrapping, texturing, raster graphics editing, rigging and skinning, fluid and smoke simulation, particle simulation, soft body simulation, sculpting, animating, match moving, camera tracking, rendering, video editing and compositing. Alongside the modeling features it also has an integrated game engine.  
 >[From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Blender_\(software\)).  
 
-We use [Blender](https://www.blender.org/) because it is a powerful open source, free of charge 3D application. It has a broad user base and a excellent [reference.](https://www.blender.org/manual/contents.html#) If you are already familiar with Blender, or know other 3D applications like Maya, C4D, Rhino, 3ds Max, or or or, you can skip this part and move on to the [Slicer section](slicer/) or export your plans directly from within Blender using the [Paper Model Add-on](#paper-model-add-on).
+We use [Blender](https://www.blender.org/) because it is a powerful open source, free of charge 3D application. It has a broad user base and a excellent [reference.](https://docs.blender.org/manual/en/dev/) If you are already familiar with Blender, or know other 3D applications like Maya, C4D, Rhino, 3ds Max, or or or, you can skip this part and move on to the [Slicer section](slicer/) or export your plans directly from within Blender using the [Paper Model Add-on](#paper-model-add-on).
 
 !!!hint
     You should use a 3 button mouse if you are using a laptop. It makes the handling of Blender way easier.  
@@ -19,7 +19,7 @@ Blender relies heavily on shortcuts. See an overview of all shortcuts here [wald
 
 ### (UI) Search Menu  
 
-Another quick way to call actions or open panels is the "Search Menu". It gives you quick access to all of Blenders commands by typing. you can open it just by hitting the __space bar__. This is pretty handy if you know a commands name but don't know where to find it. Read more [here.](https://www.blender.org/manual/interface/extended_controls.html)
+Another quick way to call actions or open panels is the "Search Menu". It gives you quick access to all of Blenders commands by typing. you can open it just by hitting the __space bar__. This is pretty handy if you know a commands name but don't know where to find it. Read more [here.](https://docs.blender.org/manual/en/dev/interface/index.html#extended-controls)
 
 
 ##### (UI) Customize  
@@ -72,7 +72,7 @@ There are several shading methods available. You can see your model as:
 - Material
 - Rendered
 
-You can switch the shading method on the bottom of the 3D view. For us the only important options are "Solid", "Wireframe" and "Bounding Box". Read more about this [in the docs.](https://www.blender.org/manual/editors/3dview/display/shading.html)
+You can switch the shading method on the bottom of the 3D view. For us the only important options are "Solid", "Wireframe" and "Bounding Box". Read more about this [in the docs.](https://docs.blender.org/manual/en/dev/editors/3dview/properties/shading.html)
 
 [![images/viewport-shading.png](images/viewport-shading.png)](images/viewport-shading.png)  
 
@@ -127,7 +127,7 @@ The 3D cursor is a pivot point for various features. You can e.g. rotate objects
 
 ### (Modeling) Modes  
 
-The __"Object Mode"__ is for working with objects in a whole and editing your scene. You can add objects, cameras lamps and others in this mode. The __"Edit Mode"__ is for editing the vertices, edges or faces of an object. When using [modifiers](#modifiers) you see their effect in object mode, __not in Edit Mode__. You can switch between Object and Edit mode just by hitting __⇥__ when your mouse is ove the 3D viewport. There are more modes available. [Readmore in the docs.](https://www.blender.org/manual/editors/3dview/object/modes.html)
+The __"Object Mode"__ is for working with objects in a whole and editing your scene. You can add objects, cameras lamps and others in this mode. The __"Edit Mode"__ is for editing the vertices, edges or faces of an object. When using [modifiers](#using-modifiers) you see their effect in object mode, __not in Edit Mode__. You can switch between Object and Edit mode just by hitting __⇥__ when your mouse is ove the 3D viewport. There are more modes available. [Readmore in the docs.](https://docs.blender.org/manual/en/dev/editors/3dview/modes.html)
 
 ##### (Modeling) Add & Delete
 
@@ -169,7 +169,7 @@ Ther are also other selection modes. The rectangular (key __r__ ) or circular (k
 
 ##### (Modeling) Duplication
 
-To duplicate the current selection (in edit or object mode) just hit __⇧ + d__. This also sets the newly created objects into grab mode so you can set their new position. All the [Transformation](#transformation) rules apply.  
+To duplicate the current selection (in edit or object mode) just hit __⇧ + d__. This also sets the newly created objects into grab mode so you can set their new position. All the [Transformation](#modeling-transformation-using-hotkeys) rules apply.  
 
 | Action                       | Result                               | Mode             |
 | :---                         | :---                                 | :---             |
@@ -183,7 +183,7 @@ You can transform objects, groups, vertices, edges and faces (i.e. your selectio
 
 ##### (Modeling) Transformation Using Hotkeys  
 
-Sometimes it is more convenient to use the hotkeys. When using the hotkeys you can easily constrain the manipulation to an axis. Just hit for example __g + x__ to only move the selection on the global x-axis. If you hit __x__ twice you transform on the objects local axis. The second transformation corresponds with the pull down next to the manipulator buttons on the button of the view. Read some more about the manipulators [here](https://www.blender.org/manual/editors/3dview/transform/transform_control/manipulators.html).   
+Sometimes it is more convenient to use the hotkeys. When using the hotkeys you can easily constrain the manipulation to an axis. Just hit for example __g + x__ to only move the selection on the global x-axis. If you hit __x__ twice you transform on the objects local axis. The second transformation corresponds with the pull down next to the manipulator buttons on the button of the view.  
 
 | Key            | manipulation                                                  |
 | :---           | :---                                                          |
@@ -208,7 +208,7 @@ Go to Edit Mode by hitting the __⇥__ key (TAB). As mentioned in the [(Modeling
 
 ##### (Modeling) Extrude  
 
-Extrudes the current selection. [All Transformation](#transformation) and [Selection](#selection) options apply. You can basically differentiate between "extrude region" (hit __e__ or use the button on the toolbar) and "extrude individual". The region extrudes the selection together. The individual extrusion uses each local axis to extrude. See [the manual for further information.](https://www.blender.org/manual/modeling/meshes/editing/duplicating/extrude.html)
+Extrudes the current selection. [All Transformation](#modeling-transformation-using-hotkeys) and [Selection](#modeling-making-selections) options apply. You can basically differentiate between "extrude region" (hit __e__ or use the button on the toolbar) and "extrude individual". The region extrudes the selection together. The individual extrusion uses each local axis to extrude. See [the manual for further information.](https://www.blender.org/manual/modeling/meshes/editing/duplicating/extrude.html)
 
 [![images/extrude.gif](images/extrude.gif)](images/extrude.gif)  
 
@@ -232,12 +232,11 @@ You might come to the point where you need to separate an object in multiple one
 | __All Loose Parts__ | Separates the mesh in its unconnected parts.         |
 | __By Material__     | Creates separate mesh objects for each material.     |
 
-Read more [here.](https://www.blender.org/manual/editors/3dview/object/editing.html#separate)  
 
 
 ##### (Modeling) Join  
 
-To join selected objects into one single object you can select them all. in __j__. Be aware that they will all be joined into the last selected object. You can see it in the difference in the highlight color. Read more [here.](https://www.blender.org/manual/editors/3dview/object/editing.html#join)
+To join selected objects into one single object you can select them all. in __j__. Be aware that they will all be joined into the last selected object. You can see it in the difference in the highlight color.  
 
 | Key/Action | Result                                                   |
 | :--        | :--                                                      |
@@ -270,11 +269,10 @@ Some modifications can be tedious when done by hand. Fortunately lots of operati
 
 | Type     | Name                                                 | Short Description                                               |
 | :---     | :---                                                 | :---                                                            |
-| Generate | [Subdivision Surface Modifier](#subdivision-surface) | Subdivide surface of selected object                            |
-| Generate | [Boolean Modifier](#boolean)                         | Intersect, unify or differentiate objects from one another      |
-| Deform   | [Simple Deform Modifier](#simple-deform)             | Deform objects by Twisting, bending,tabering or stretching them |
-| Generate | [Array Modifier](#array)                             | Create multiple copies of an object                             |
-| Generate | [Bevel Modifier](#bevel)                             |                                                                 |   
+| Generate | [Subdivision Surface Modifier](#modifiers-subdivision-surface) | Subdivide surface of selected object                            |
+| Generate | [Boolean Modifier](#modifiers-boolean)                         | Intersect, unify or differentiate objects from one another      |
+| Deform   | [Simple Deform Modifier](#modifiers-simple-deform)             | Deform objects by Twisting, bending,tabering or stretching them |
+| Generate | [Array Modifier](#modifiers-array)                             | Create multiple copies of an object                             |  
 
 [![images/modifiers.png](images/modifiers.png)](images/modifiers.png)  
 
@@ -322,18 +320,18 @@ The "Array Modifier" can be used to duplicate elements. You can offset the copie
 
 ##### (Modifiers) Subdivide and Displace  
 
-To show you what can be done by combining several modifiers the following animation shows how to use the [Subdivision Surface](subdivision-surface) and [Displace](https://www.blender.org/manual/modeling/modifiers/deform/displace.html) modifiers together. The subdivision is done to create more vertices and the displacement to generate some offset on them. The displace modifier uses textures to offset the vertices. You could also use an image or a ramp to displace the vertices. Be creative. This is already rather complex for the starters. Use it as inspiration. There are many more modifiers. To much to explore them all here. Play with some/all of them.  
+To show you what can be done by combining several modifiers the following animation shows how to use the [Subdivision Surface](#modifiers-subdivision-surface) and [Displace](https://www.blender.org/manual/modeling/modifiers/deform/displace.html) modifiers together. The subdivision is done to create more vertices and the displacement to generate some offset on them. The displace modifier uses textures to offset the vertices. You could also use an image or a ramp to displace the vertices. Be creative. This is already rather complex for the starters. Use it as inspiration. There are many more modifiers. To much to explore them all here. Play with some/all of them.  
 
 
 [![images/modifier-subdivide-displace.gif](images/modifier-subdivide-displace.gif)](images/modifier-subdivide-displace.gif)  
 
 ### Add-ons  
 
-Additionally to the many build in features of Blender there is a whole ecosystem of [Add-ons](https://www.blender.org/manual/advanced/scripting/python/add_ons.html). There are several Add-ons that are directly distributed with Blender but bot enabled by default. You can browse them in the user preferences an enable those that you like to use. You can also install Add-ons from file. These are Python scripts that are written by members of the community. For our project there are two Add-ons we need to download and install.  
+Additionally to the many build in features of Blender there is a whole ecosystem of [Add-ons](https://docs.blender.org/manual/en/dev/advanced/scripting/introduction.html#extending-blender). There are several Add-ons that are directly distributed with Blender but bot enabled by default. You can browse them in the user preferences an enable those that you like to use. You can also install Add-ons from file. These are Python scripts that are written by members of the community. For our project there are two Add-ons we need to download and install.  
 
 [![images/user-prefs-addon.png](images/user-prefs-addon.png)](images/user-prefs-addon.png)  
 
-1. [Export: Paper Model (.svg) | Export printable net for paper modeling](https://git.blender.org/gitweb/gitweb.cgi/blender-addons-contrib.git/blob_plain/refs/heads/master:/io_export_paper_model.py)  
+1. [Export: Paper Model (.svg) | Export printable net for paper modeling](https://github.com/addam/Export-Paper-Model-from-Blender)  
 2. [Autodesk DXF (.dxf) | Export geometry to .DXF file format.](http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Import-Export/DXF_Exporter)  
 
 ##### (Add-on) Paper Model 
