@@ -1,6 +1,6 @@
 ## About Slicer for Fusion 360
 
-When you are done with creating a simple 3D object either by using [Blender]({{blender/ | prepend: site.basurl}}) or with [Processing]({{processing/ | prepend: site.baseurl}}) you can move on to [Autodesks Slicer for Fusion 360](https://apps.autodesk.com/FUSION/en/Detail/Index?id=8699194120463301363&os=Win64&appLang=en) . This applicaiton allows creation of low-tech LOM-style (Laminated object manufacturing) solid models. The application has several construction techniques for now we will only focus on creating [Folded Panels](#folded-panels).  
+When you are done with creating a simple 3D object either by using [Blender](/doing-papercraft/blender/) or with [Processing](/doing-papercraft/processing/) you can move on to [Autodesks Slicer for Fusion 360](https://apps.autodesk.com/FUSION/en/Detail/Index?id=8699194120463301363&os=Win64&appLang=en) . This applicaiton allows creation of low-tech LOM-style (Laminated object manufacturing) solid models. The application has several construction techniques for now we will only focus on creating [Folded Panels](#folded-panels).  
 
 !!!hint
     - __The default unit is inch__. This cannot be set globally you will need to adjust this for each panel where you use units.

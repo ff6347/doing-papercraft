@@ -7,7 +7,6 @@ site_url: http://fh-potsdam.github.io/doing-papercraft/
 repo_name: doing-papercraft
 site_description: This document is a write-down for a workshop @ the University of Applied Sciences Potsdam (Germany) as part of the seminar "Datenobjekte" (data objects) by Professor Boris Müller (a.k.a @borism on Twitter). We will explore the minimal basics of the 3D application Blender to create primitive shapes which will then be unfolded for laser cutting.
 site_favicon: favicon.ico
-
 pages:
 - Home: index.md
 - Workflows: workflows.md
