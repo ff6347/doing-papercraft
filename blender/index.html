@@ -1,0 +1,1545 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This document is a write-down for a workshop @ the University of Applied Sciences Potsdam (Germany) as part of the seminar "Datenobjekte" (data objects) by Professor Boris Müller (a.k.a @borism on Twitter). We will explore the minimal basics of the 3D application Blender to create primitive shapes which will then be unfolded for laser cutting.">
+      
+      
+        <meta name="author" content="Fabian 'fabiantheblind' Morón Zirfas">
+      
+      
+        <link rel="canonical" href="http://fh-potsdam.github.io/doing-papercraft/blender/">
+      
+      
+        <link rel="prev" href="../workflows/">
+      
+      
+        <link rel="next" href="../processing/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Blender - Doing Papercraft</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#about-blender" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Doing Papercraft" class="md-header__button md-logo" aria-label="Doing Papercraft" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Doing Papercraft
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Blender
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FH-Potsdam/doing-papercraft" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    doing-papercraft
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Doing Papercraft" class="md-nav__button md-logo" aria-label="Doing Papercraft" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Doing Papercraft
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FH-Potsdam/doing-papercraft" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    doing-papercraft
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/" class="md-nav__link">
+        Workflows
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Blender
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Blender
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-blender" class="md-nav__link">
+    About Blender
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-shortcuts" class="md-nav__link">
+    (UI) Shortcuts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-search-menu" class="md-nav__link">
+    (UI) Search Menu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-customize" class="md-nav__link">
+    (UI) Customize
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-view-region" class="md-nav__link">
+    (UI) View Region
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-viewport-shading" class="md-nav__link">
+    (UI) Viewport Shading
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-view-navigation" class="md-nav__link">
+    (UI) View Navigation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-cursor" class="md-nav__link">
+    (UI) Cursor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-modes" class="md-nav__link">
+    (Modeling) Modes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-add-delete" class="md-nav__link">
+    (Modeling) Add &amp; Delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-making-selections" class="md-nav__link">
+    (Modeling) Making Selections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-duplication" class="md-nav__link">
+    (Modeling) Duplication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-transformation-using-manipulators" class="md-nav__link">
+    (Modeling) Transformation Using Manipulators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-transformation-using-hotkeys" class="md-nav__link">
+    (Modeling) Transformation Using Hotkeys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-mesh-manipulation" class="md-nav__link">
+    (Modeling) Mesh Manipulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-extrude" class="md-nav__link">
+    (Modeling) Extrude
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-separate" class="md-nav__link">
+    (Modeling) Separate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-join" class="md-nav__link">
+    (Modeling) Join
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-other-manipulations" class="md-nav__link">
+    (Modeling) Other Manipulations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-modifiers" class="md-nav__link">
+    Using Modifiers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers-subdivision-surface" class="md-nav__link">
+    (Modifiers) Subdivision Surface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers-boolean" class="md-nav__link">
+    (Modifiers) Boolean
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers-simple-deform" class="md-nav__link">
+    (Modifiers) Simple Deform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers-array" class="md-nav__link">
+    (Modifiers) Array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers-subdivide-and-displace" class="md-nav__link">
+    (Modifiers) Subdivide and Displace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-ons" class="md-nav__link">
+    Add-ons
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-on-paper-model" class="md-nav__link">
+    (Add-on) Paper Model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-on-dxf-export" class="md-nav__link">
+    (Add-on) DXF export
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    Export
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-stl-stereolithography" class="md-nav__link">
+    (Export) STL STereoLithography
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-obj-wavefront" class="md-nav__link">
+    (Export) OBJ Wavefront
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processing/" class="md-nav__link">
+        Processing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slicer/" class="md-nav__link">
+        Slicer for Fusion 360
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creating-clean-data/" class="md-nav__link">
+        Creating Clean Plans
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../laser.md" class="md-nav__link">
+        Laser
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gallery/" class="md-nav__link">
+        Gallery
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../links/" class="md-nav__link">
+        Links
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-blender" class="md-nav__link">
+    About Blender
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-shortcuts" class="md-nav__link">
+    (UI) Shortcuts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-search-menu" class="md-nav__link">
+    (UI) Search Menu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-customize" class="md-nav__link">
+    (UI) Customize
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-view-region" class="md-nav__link">
+    (UI) View Region
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-viewport-shading" class="md-nav__link">
+    (UI) Viewport Shading
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-view-navigation" class="md-nav__link">
+    (UI) View Navigation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-cursor" class="md-nav__link">
+    (UI) Cursor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-modes" class="md-nav__link">
+    (Modeling) Modes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-add-delete" class="md-nav__link">
+    (Modeling) Add &amp; Delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-making-selections" class="md-nav__link">
+    (Modeling) Making Selections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-duplication" class="md-nav__link">
+    (Modeling) Duplication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-transformation-using-manipulators" class="md-nav__link">
+    (Modeling) Transformation Using Manipulators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-transformation-using-hotkeys" class="md-nav__link">
+    (Modeling) Transformation Using Hotkeys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-mesh-manipulation" class="md-nav__link">
+    (Modeling) Mesh Manipulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-extrude" class="md-nav__link">
+    (Modeling) Extrude
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-separate" class="md-nav__link">
+    (Modeling) Separate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-join" class="md-nav__link">
+    (Modeling) Join
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-other-manipulations" class="md-nav__link">
+    (Modeling) Other Manipulations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-modifiers" class="md-nav__link">
+    Using Modifiers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers-subdivision-surface" class="md-nav__link">
+    (Modifiers) Subdivision Surface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers-boolean" class="md-nav__link">
+    (Modifiers) Boolean
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers-simple-deform" class="md-nav__link">
+    (Modifiers) Simple Deform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers-array" class="md-nav__link">
+    (Modifiers) Array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers-subdivide-and-displace" class="md-nav__link">
+    (Modifiers) Subdivide and Displace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-ons" class="md-nav__link">
+    Add-ons
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-on-paper-model" class="md-nav__link">
+    (Add-on) Paper Model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-on-dxf-export" class="md-nav__link">
+    (Add-on) DXF export
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    Export
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-stl-stereolithography" class="md-nav__link">
+    (Export) STL STereoLithography
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-obj-wavefront" class="md-nav__link">
+    (Export) OBJ Wavefront
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+  <h1>Blender</h1>
+
+<h6 id="about-blender">About Blender<a class="headerlink" href="#about-blender" title="Permanent link">&para;</a></h6>
+<p><img src="../images/blender-logo.svg" width=1000 alt="blender logo"></p>
+<!-- ![Blender logo](images/blender-logo.svg)   -->
+
+<blockquote>
+<p>Blender is a professional free and open-source 3D computer graphics software product used for creating animated films, visual effects, art, 3D printed models, interactive 3D applications and video games. Blender&rsquo;s features include 3D modeling, UV unwrapping, texturing, raster graphics editing, rigging and skinning, fluid and smoke simulation, particle simulation, soft body simulation, sculpting, animating, match moving, camera tracking, rendering, video editing and compositing. Alongside the modeling features it also has an integrated game engine.<br />
+<a href="https://en.wikipedia.org/wiki/Blender_(software)">From Wikipedia, the free encyclopedia</a>.  </p>
+</blockquote>
+<p>We use <a href="https://www.blender.org/">Blender</a> because it is a powerful open source, free of charge 3D application. It has a broad user base and a excellent <a href="https://docs.blender.org/manual/en/dev/">reference.</a> If you are already familiar with Blender, or know other 3D applications like Maya, C4D, Rhino, 3ds Max, or or or, you can skip this part and move on to the <a href="slicer/">Slicer section</a> or export your plans directly from within Blender using the <a href="#paper-model-add-on">Paper Model Add-on</a>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You should use a 3 button mouse if you are using a laptop. It makes the handling of Blender way easier.  </p>
+</div>
+<h6 id="ui-shortcuts">(UI) Shortcuts<a class="headerlink" href="#ui-shortcuts" title="Permanent link">&para;</a></h6>
+<p>Blender relies heavily on shortcuts. See an overview of all shortcuts here <a href="http://waldobronchart.github.io/ShortcutMapper/#Blender">waldobronchart.github.io/ShortcutMapper/#Blender</a>. Some shortcuts depend on the position of the mouse e.g. <strong>x</strong> for deleting only works when the mouse is over the 3D view.  </p>
+<h6 id="ui-search-menu">(UI) Search Menu<a class="headerlink" href="#ui-search-menu" title="Permanent link">&para;</a></h6>
+<p>Another quick way to call actions or open panels is the &ldquo;Search Menu&rdquo;. It gives you quick access to all of Blenders commands by typing. you can open it just by hitting the <strong>space bar</strong>. This is pretty handy if you know a commands name but don&rsquo;t know where to find it. Read more <a href="https://docs.blender.org/manual/en/dev/interface/index.html#extended-controls">here.</a></p>
+<h6 id="ui-customize">(UI) Customize<a class="headerlink" href="#ui-customize" title="Permanent link">&para;</a></h6>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The interface is highly customizable in Blender. We will only adjust some minor settings to make it more user friendly.  </p>
+</div>
+<p>Go to: <strong>File &gt; User Preferences…</strong> and select the &ldquo;Input&rdquo; tab.  </p>
+<ol>
+<li>Change the Mouse selection from right click to left click in the settings &gt; input tab</li>
+<li>&ldquo;Emulate Numpad&rdquo; (if you&rsquo;re on a laptop you can use the numbers instead of the numpad)</li>
+<li>Adjust UI colors in the theme tab (if you like it more fancy)  </li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You need to hit <strong>&ldquo;Save User Settings&rdquo;</strong> at the bottom of the window to apply these changes. </p>
+</div>
+<p><a href="../images/blender-user-preferences.png"><img alt="blender-user-preferences.png" src="../images/blender-user-preferences.png" /></a>  </p>
+<p>You can add or remove windows by right clicking into the &ldquo;seam&rdquo; between two windows. This allows you to add new windows or join existing ones. When adding you can toggle a horizontal or vertical split by pressing the middle mouse button This will be indicated by the dashed line that appears on the window you are trying to split. You can do the same by clicking and dragging the striped corner of a window to the left or down. To remove those windows just join them again. (See the animation below.)  </p>
+<table>
+<thead>
+<tr>
+<th align="left">Mouse</th>
+<th align="left">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Right click window seam</td>
+<td align="left">split/join windows</td>
+</tr>
+<tr>
+<td align="left">Right click window seam select split + middle mouse</td>
+<td align="left">toggle horizontal/vertical split</td>
+</tr>
+<tr>
+<td align="left">click + drag striped corner down/up</td>
+<td align="left">split horizontally</td>
+</tr>
+<tr>
+<td align="left">click + drag striped corner left/right</td>
+<td align="left">split vertically</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../images/blender-ui.gif"><img alt="images/blender-ui.gif" src="../images/blender-ui.gif" /></a></p>
+<p>You can change the content of a window by using the dropdown menu under the icon in the header (which is at the bottom of the 3D view).  </p>
+<p><a href="../images/blender-change-window-content.png"><img alt="images/blender-change-window-content.png" src="../images/blender-change-window-content.png" /></a>  </p>
+<h6 id="ui-view-region">(UI) View Region<a class="headerlink" href="#ui-view-region" title="Permanent link">&para;</a></h6>
+<p>Within the 3D view you also have a tool bar on the left and the tool shelf on the right. <strong>t</strong> shows tool bar and <strong>n</strong> the tool shelf. On the toolbar you have the most common commands for transformation, editing, creation and many more organized as tabs. On the tool shelf you can access commonly used properties for transformations, the view, the 3D cursor and others organized as expandable panels. Both of these regions are kind of quick access palettes for properties and action that are essential for editing.  </p>
+<p><a href="../images/blender-3d-viewport-tools.png"><img alt="images/blender-3d-viewport-tools.png" src="../images/blender-3d-viewport-tools.png" /></a>  </p>
+<h6 id="ui-viewport-shading">(UI) Viewport Shading<a class="headerlink" href="#ui-viewport-shading" title="Permanent link">&para;</a></h6>
+<p>There are several shading methods available. You can see your model as:  </p>
+<ul>
+<li>Bounding Box</li>
+<li>Wireframe</li>
+<li>Solid</li>
+<li>Texture</li>
+<li>Material</li>
+<li>Rendered</li>
+</ul>
+<p>You can switch the shading method on the bottom of the 3D view. For us the only important options are &ldquo;Solid&rdquo;, &ldquo;Wireframe&rdquo; and &ldquo;Bounding Box&rdquo;. Read more about this <a href="https://docs.blender.org/manual/en/dev/editors/3dview/properties/shading.html">in the docs.</a></p>
+<p><a href="../images/viewport-shading.png"><img alt="images/viewport-shading.png" src="../images/viewport-shading.png" /></a>  </p>
+<h6 id="ui-view-navigation">(UI) View Navigation<a class="headerlink" href="#ui-view-navigation" title="Permanent link">&para;</a></h6>
+<p>The basic navigation in the 3D view is done with the mouse. You can also change the view by using the numpad.  </p>
+<table>
+<thead>
+<tr>
+<th align="right">Mouse</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">left mouse</td>
+<td>select</td>
+</tr>
+<tr>
+<td align="right">right mouse</td>
+<td>set 3D cursor position</td>
+</tr>
+<tr>
+<td align="right">middle mouse click</td>
+<td>orbit</td>
+</tr>
+<tr>
+<td align="right">middle mouse click + ⇧</td>
+<td>pan</td>
+</tr>
+<tr>
+<td align="right">scroll</td>
+<td>zoom</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The most useful keys on the numpad are (table also has emulated numpad)</p>
+</div>
+<table>
+<thead>
+<tr>
+<th align="right">Key Combo (emulated)</th>
+<th align="left">View Change</th>
+<th align="left">Key Combo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td align="left">Front</td>
+<td align="left">Numpad 1</td>
+</tr>
+<tr>
+<td align="right">^ + 1</td>
+<td align="left">Back</td>
+<td align="left">Numpad ^ + 1</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left">Right</td>
+<td align="left">Numpad 3</td>
+</tr>
+<tr>
+<td align="right">^ + 3</td>
+<td align="left">Left</td>
+<td align="left">Numpad ^ + 3</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="left">Top</td>
+<td align="left">Numpad 7</td>
+</tr>
+<tr>
+<td align="right">^ + 7</td>
+<td align="left">Bottom</td>
+<td align="left">Numpad ^ + 7</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left">Toggle orthographic vs perspective mode</td>
+<td align="left">Numpad 5</td>
+</tr>
+<tr>
+<td align="right">0</td>
+<td align="left">Camera View</td>
+<td align="left">Numpad 0</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td align="left"><strong>Not so important keys</strong></td>
+<td align="left">Numpad</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left">Orbit Left</td>
+<td align="left">Numpad 4</td>
+</tr>
+<tr>
+<td align="right">^ + 4</td>
+<td align="left">Pan Left</td>
+<td align="left">Numpad ^ + 4</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="left">Orbit Right</td>
+<td align="left">Numpad 6</td>
+</tr>
+<tr>
+<td align="right">^ + 6</td>
+<td align="left">Pan Right</td>
+<td align="left">Numpad ^ + 6</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="left">Orbit Up</td>
+<td align="left">Numpad 8</td>
+</tr>
+<tr>
+<td align="right">^ + 8</td>
+<td align="left">Pan Up</td>
+<td align="left">Numpad ^ + 8</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left">Oribit Down</td>
+<td align="left">Numpad 2</td>
+</tr>
+<tr>
+<td align="right">^ + 2</td>
+<td align="left">Pan Down</td>
+<td align="left">Numpad ^ + 2</td>
+</tr>
+<tr>
+<td align="right">-</td>
+<td align="left">Zoom Out</td>
+<td align="left">Numpad -</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td align="left">Zoom In (seems not to work)</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h6 id="ui-cursor">(UI) Cursor<a class="headerlink" href="#ui-cursor" title="Permanent link">&para;</a></h6>
+<p>The 3D cursor is a pivot point for various features. You can e.g. rotate objects around the cursor (see image below). Newly created objects get created at this position. You can also use the cursor to snap objects to it or the other way around.  </p>
+<table>
+<thead>
+<tr>
+<th align="left">Key/Action</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">right click</td>
+<td align="left">set 3D cursor position</td>
+</tr>
+<tr>
+<td align="left">⇧ + c</td>
+<td align="left">reset 3D cursor to the centre of the scene</td>
+</tr>
+<tr>
+<td align="left">⇧ + s</td>
+<td align="left">open snap menu (snap to cursor and so on)</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../images/pivot-menu.png"><img alt="images/pivot-menu.png" src="../images/pivot-menu.png" /></a></p>
+<h6 id="modeling-modes">(Modeling) Modes<a class="headerlink" href="#modeling-modes" title="Permanent link">&para;</a></h6>
+<p>The <strong>&ldquo;Object Mode&rdquo;</strong> is for working with objects in a whole and editing your scene. You can add objects, cameras lamps and others in this mode. The <strong>&ldquo;Edit Mode&rdquo;</strong> is for editing the vertices, edges or faces of an object. When using <a href="#using-modifiers">modifiers</a> you see their effect in object mode, <strong>not in Edit Mode</strong>. You can switch between Object and Edit mode just by hitting <strong>⇥</strong> when your mouse is ove the 3D viewport. There are more modes available. <a href="https://docs.blender.org/manual/en/dev/editors/3dview/modes.html">Readmore in the docs.</a></p>
+<h6 id="modeling-add-delete">(Modeling) Add &amp; Delete<a class="headerlink" href="#modeling-add-delete" title="Permanent link">&para;</a></h6>
+<p>On the tool bar on the left of the 3D view you have various possibilities to add objects.
+Use the Create tab an the left to add basic shapes. You can also use the hotkey <strong>⇧ + a</strong> or use the &ldquo;Add&rdquo; menu at the bottom of the 3D view. When you create a new shape you get a new panel at the bottom of the toolbar. it is called the operator panel. There you can set additional settings for the newly created shape e.g. the subdivision of a ICO Sphere or the depth and the radius of a cylinder ad so on. <strong>This is only possible on creation of the shape.</strong> If the operator panel does not show up just hit <strong>F6</strong> to show it as a floating panel.<br />
+To delete the selection hit <strong>x</strong> this applies for Edit- and Object Mode. In Edit Mode you get an additional panel to decide what should be deleted e.g. Vertices, edges, faces and even more options like edge collapse and more. You need to play with it and <a href="https://www.blender.org/manual/modeling/meshes/editing/basics/deleting.html">read in the manual</a> about it.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Key/Action</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Toolbar Left</td>
+<td align="left">add different type of objects</td>
+</tr>
+<tr>
+<td align="left">Add Menu</td>
+<td align="left">add different type of objects</td>
+</tr>
+<tr>
+<td align="left">⇧ + a</td>
+<td align="left">open &ldquo;Add&rdquo; floating panel</td>
+</tr>
+<tr>
+<td align="left">F6</td>
+<td align="left">open &ldquo;Operator&rdquo; floating panel</td>
+</tr>
+<tr>
+<td align="left">x</td>
+<td align="left">delete selection</td>
+</tr>
+</tbody>
+</table>
+<h6 id="modeling-making-selections">(Modeling) Making Selections<a class="headerlink" href="#modeling-making-selections" title="Permanent link">&para;</a></h6>
+<p>To select objects use the left mouse click (if set to left selection. The default is right selection). You can add or remove objects to or from the selection by holding <strong>⇧</strong>. Selected objects are highlighted in orange (default theme). The first in the order of selected objects is a bit brighter. You can also select everything by hitting <strong>a</strong>. In &ldquo;Edit Mode&rdquo; there are some extra options for selecting things. You can switch between vertices, edges and faces selection and you can combine them with the buttons on the bar below the 3D view. 
+Ther are also other selection modes. The rectangular (key <strong>r</strong> ) or circular (key <strong>c</strong>) selection allows to select  by clicking and dragging. This only applies to the visible objects, vertices, edges and faces. You can change this behavior if you want to selection to apply to non visible objects as well. There are even more options for selecting. Like Inverting selections and so on. See <a href="https://www.blender.org/manual/modeling/meshes/selecting/introduction.html#selection-mode">the Blender Manual</a>  </p>
+<p><a href="../images/selection-modes.png"><img alt="selection-modes.png" src="../images/selection-modes.png" /></a>  </p>
+<table>
+<thead>
+<tr>
+<th align="left">Action</th>
+<th align="left">Result</th>
+<th align="left">Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Left Mouse</td>
+<td align="left">select</td>
+<td align="left">Object/Edit Mode</td>
+</tr>
+<tr>
+<td align="left">Left Mouse + ⇧</td>
+<td align="left">add/remove</td>
+<td align="left">Object/Edit Mode</td>
+</tr>
+<tr>
+<td align="left">a</td>
+<td align="left">select all</td>
+<td align="left">Object/Edit Mode</td>
+</tr>
+<tr>
+<td align="left">^ + i</td>
+<td align="left">invert the current selection</td>
+<td align="left">Object/Edit Mode</td>
+</tr>
+<tr>
+<td align="left">^ + Tab</td>
+<td align="left">selection mode switcher</td>
+<td align="left">Edit Mode</td>
+</tr>
+<tr>
+<td align="left">b + left mouse click &amp; drag</td>
+<td align="left">select rectangular area</td>
+<td align="left">Edit Mode</td>
+</tr>
+<tr>
+<td align="left">c + left mouse click &amp; drag</td>
+<td align="left">paint selection area</td>
+<td align="left">Edit Mode</td>
+</tr>
+<tr>
+<td align="left">c + left mouse + mouse wheel</td>
+<td align="left">paint selection increase or decrease</td>
+<td align="left">Edit Mode</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../images/blender-ui-sel.gif"><img alt="blender-ui-sel.gif" src="../images/blender-ui-sel.gif" /></a>  </p>
+<h6 id="modeling-duplication">(Modeling) Duplication<a class="headerlink" href="#modeling-duplication" title="Permanent link">&para;</a></h6>
+<p>To duplicate the current selection (in edit or object mode) just hit <strong>⇧ + d</strong>. This also sets the newly created objects into grab mode so you can set their new position. All the <a href="#modeling-transformation-using-hotkeys">Transformation</a> rules apply.  </p>
+<table>
+<thead>
+<tr>
+<th align="left">Action</th>
+<th align="left">Result</th>
+<th align="left">Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">⇧ + d</td>
+<td align="left">duplicates the selected object</td>
+<td align="left">Object/Edit Mode</td>
+</tr>
+</tbody>
+</table>
+<h6 id="modeling-transformation-using-manipulators">(Modeling) Transformation Using Manipulators<a class="headerlink" href="#modeling-transformation-using-manipulators" title="Permanent link">&para;</a></h6>
+<p>You can transform objects, groups, vertices, edges and faces (i.e. your selection) by using the 3D manipulators. Change between grab, rotate and scale mode on the bottom of the 3D view. You can combine them or shut them off totally. If you click and drag into the circle at the centre of the manipulator you transform on all axis at once.  </p>
+<p><a href="../images/manipulation.gif"><img alt="manipulation.gif" src="../images/manipulation.gif" /></a>  </p>
+<h6 id="modeling-transformation-using-hotkeys">(Modeling) Transformation Using Hotkeys<a class="headerlink" href="#modeling-transformation-using-hotkeys" title="Permanent link">&para;</a></h6>
+<p>Sometimes it is more convenient to use the hotkeys. When using the hotkeys you can easily constrain the manipulation to an axis. Just hit for example <strong>g + x</strong> to only move the selection on the global x-axis. If you hit <strong>x</strong> twice you transform on the objects local axis. The second transformation corresponds with the pull down next to the manipulator buttons on the button of the view.  </p>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">manipulation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">r</td>
+<td align="left">rotate</td>
+</tr>
+<tr>
+<td align="left">r + x/y/z</td>
+<td align="left">rotate on one axis only (global)</td>
+</tr>
+<tr>
+<td align="left">r + x/y/z × 2</td>
+<td align="left">rotate on one axis only (selected axis)</td>
+</tr>
+<tr>
+<td align="left">g</td>
+<td align="left">transform (grab)</td>
+</tr>
+<tr>
+<td align="left">g + x/y/z</td>
+<td align="left">transform (grab) on one axis only (global)</td>
+</tr>
+<tr>
+<td align="left">g + x/y/z × 2</td>
+<td align="left">transform (grab) on one axis only (selected axis)</td>
+</tr>
+<tr>
+<td align="left">s</td>
+<td align="left">scale</td>
+</tr>
+<tr>
+<td align="left">s  + x/y/z</td>
+<td align="left">scale on one axis only (global)</td>
+</tr>
+<tr>
+<td align="left">s  + x/y/z × 2</td>
+<td align="left">scale on one axis only  (selected axis)</td>
+</tr>
+<tr>
+<td align="left">alt + g</td>
+<td align="left">snaps selection to the center of the scene (Object Mode only)</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../images/manipulation-hotkeys.gif"><img alt="images/manipulation-hotkeys.gif" src="../images/manipulation-hotkeys.gif" /></a>  </p>
+<h6 id="modeling-mesh-manipulation">(Modeling) Mesh Manipulation<a class="headerlink" href="#modeling-mesh-manipulation" title="Permanent link">&para;</a></h6>
+<p>Besides just adding primitive shapes on one another you can also edit the mesh directly. To do this
+Go to Edit Mode by hitting the <strong>⇥</strong> key (TAB). As mentioned in the <a href="#modeling-making-selections">(Modeling Making Selections)</a> section you can select in different ways. Vertices only, faces or edges or combine these options. You can now move the selection around. To manipulate your mesh even further you can copy and paste your selection. (<strong>⌘  + c</strong> &amp; <strong>⌘ + v</strong>). Additionally you can use several options on the toolbar to edit your mesh. Each option has its own operators.   </p>
+<h6 id="modeling-extrude">(Modeling) Extrude<a class="headerlink" href="#modeling-extrude" title="Permanent link">&para;</a></h6>
+<p>Extrudes the current selection. <a href="#modeling-transformation-using-hotkeys">All Transformation</a> and <a href="#modeling-making-selections">Selection</a> options apply. You can basically differentiate between &ldquo;extrude region&rdquo; (hit <strong>e</strong> or use the button on the toolbar) and &ldquo;extrude individual&rdquo;. The region extrudes the selection together. The individual extrusion uses each local axis to extrude. See <a href="https://www.blender.org/manual/modeling/meshes/editing/duplicating/extrude.html">the manual for further information.</a></p>
+<p><a href="../images/extrude.gif"><img alt="images/extrude.gif" src="../images/extrude.gif" /></a>  </p>
+<table>
+<thead>
+<tr>
+<th align="left">Key/Action</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">e</td>
+<td align="left">Extrude Region</td>
+</tr>
+<tr>
+<td align="left">⌥ + e</td>
+<td align="left">Extrude Individual</td>
+</tr>
+</tbody>
+</table>
+<h6 id="modeling-separate">(Modeling) Separate<a class="headerlink" href="#modeling-separate" title="Permanent link">&para;</a></h6>
+<p>You might come to the point where you need to separate an object in multiple ones. There is an easy short cut for that. Go into Edit Mode (hit ⇥) and select the faces or vertices you want in an new object and hit <strong>p</strong>. You will be presented with a dialog that allows you to split by:  </p>
+<table>
+<thead>
+<tr>
+<th align="left">Key/Action</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">p</td>
+<td align="left">brings up the separate menu</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">Split Type</th>
+<th align="left">Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Selected</strong></td>
+<td align="left">This option separates the selection to a new object.</td>
+</tr>
+<tr>
+<td align="left"><strong>All Loose Parts</strong></td>
+<td align="left">Separates the mesh in its unconnected parts.</td>
+</tr>
+<tr>
+<td align="left"><strong>By Material</strong></td>
+<td align="left">Creates separate mesh objects for each material.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="modeling-join">(Modeling) Join<a class="headerlink" href="#modeling-join" title="Permanent link">&para;</a></h6>
+<p>To join selected objects into one single object you can select them all. in <strong>j</strong>. Be aware that they will all be joined into the last selected object. You can see it in the difference in the highlight color.  </p>
+<table>
+<thead>
+<tr>
+<th align="left">Key/Action</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">^ + j</td>
+<td align="left">merges all objects into the last selected Active object.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="modeling-other-manipulations">(Modeling) Other Manipulations<a class="headerlink" href="#modeling-other-manipulations" title="Permanent link">&para;</a></h6>
+<table>
+<thead>
+<tr>
+<th align="left">Key/Action</th>
+<th align="left">Result</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">f</td>
+<td align="left">Fill</td>
+<td align="left">Fills the selection with vertices, edges and faces</td>
+</tr>
+<tr>
+<td align="left">^ + f</td>
+<td align="left">Face manipulation panel</td>
+<td align="left">Various options to edit faces</td>
+</tr>
+<tr>
+<td align="left">i</td>
+<td align="left">inset face</td>
+<td align="left">Works only with faces</td>
+</tr>
+<tr>
+<td align="left">^ + b</td>
+<td align="left">bevel</td>
+<td align="left">Works only with faces</td>
+</tr>
+<tr>
+<td align="left">^ + e</td>
+<td align="left">Edge manipulation panel</td>
+<td align="left">Various options to edit edges</td>
+</tr>
+<tr>
+<td align="left">^ + v</td>
+<td align="left">Vertex manipulation panel</td>
+<td align="left">Various options to edit vertices</td>
+</tr>
+<tr>
+<td align="left">w</td>
+<td align="left">Specials Panel</td>
+<td align="left">Holds various options</td>
+</tr>
+</tbody>
+</table>
+<p>To create new geometry on an existing one you can use the several options. Subdivide, Loop Cut and Slide or the Knife to name just a few. Subdivide for example divides the surface a defined number of times and gives some more options, like smoothness and fractal noise. Loop Cut and Slide allows to subdivide a selection as well by setting a position to cut in by dragging the mouse. the Knife does what it says. Allows to cut the mesh.  </p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You will see extra information on some tools on the bottom bar of the 3D view. The Knife for example needs to be confirmed by hitting ↩ (RETURN). Explore the tools by playing with them.  </p>
+</div>
+<h6 id="using-modifiers">Using Modifiers<a class="headerlink" href="#using-modifiers" title="Permanent link">&para;</a></h6>
+<p>Some modifications can be tedious when done by hand. Fortunately lots of operations have already been pre defined as modifiers. You can access them on the &ldquo;Properties&rdquo; window under the little wrench. All modifiers first only affect the selected object. If you want to generate real mesh from them you need to apply them. Also be aware that modifiers work in stack. The order of them define their outcome. You can move them in the stack order by using the up and down arrows on each modifier. We will take a look at some of them that might be useful for our purpose. When you export your form for exchange with the forthcoming applications you don&rsquo;t need to apply these modifiers. An export to Wavefront obj will add all these vertices to the mesh. Read more about modifiers <a href="https://www.blender.org/manual/modeling/modifiers/index.html">here.</a>  </p>
+<table>
+<thead>
+<tr>
+<th align="left">Type</th>
+<th align="left">Name</th>
+<th align="left">Short Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Generate</td>
+<td align="left"><a href="#modifiers-subdivision-surface">Subdivision Surface Modifier</a></td>
+<td align="left">Subdivide surface of selected object</td>
+</tr>
+<tr>
+<td align="left">Generate</td>
+<td align="left"><a href="#modifiers-boolean">Boolean Modifier</a></td>
+<td align="left">Intersect, unify or differentiate objects from one another</td>
+</tr>
+<tr>
+<td align="left">Deform</td>
+<td align="left"><a href="#modifiers-simple-deform">Simple Deform Modifier</a></td>
+<td align="left">Deform objects by Twisting, bending,tabering or stretching them</td>
+</tr>
+<tr>
+<td align="left">Generate</td>
+<td align="left"><a href="#modifiers-array">Array Modifier</a></td>
+<td align="left">Create multiple copies of an object</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../images/modifiers.png"><img alt="images/modifiers.png" src="../images/modifiers.png" /></a>  </p>
+<h6 id="modifiers-subdivision-surface">(Modifiers) Subdivision Surface<a class="headerlink" href="#modifiers-subdivision-surface" title="Permanent link">&para;</a></h6>
+<p>This modifier divides each surface by the number set in the view/render section of it. The difference between view and render should be clear. View is what we see in the 3D view. Render is what will be used in the final render. For our purpose the only thing we need to be concerned about is the view setting. This is what will be exported into our exchange formats. You can also switch between a &ldquo;Simple&rdquo; and &ldquo;Catmull-Clark&rdquo;. To see the result before applying you need to switch the shading type to Wireframe. You can read more about this modifier <a href="https://www.blender.org/manual/modeling/modifiers/generate/subsurf.html">here.</a>  </p>
+<blockquote>
+<p><strong>&ldquo;Catmull-Clark&rdquo;</strong>
+The default option, subdivides and smooths the surfaces. According to <a href="https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface">its Wikipedia page</a>, the “arbitrary-looking formula was chosen by Catmull and Clark based on the aesthetic appearance of the resulting surfaces rather than on a mathematical derivation.  </p>
+</blockquote>
+<p><a href="../images/modifier-subdivision-800x500.gif"><img alt="images/modifier-subdivision-800x500.gif" src="../images/modifier-subdivision-800x500.gif" /></a>  </p>
+<h6 id="modifiers-boolean">(Modifiers) Boolean<a class="headerlink" href="#modifiers-boolean" title="Permanent link">&para;</a></h6>
+<p>The &ldquo;Boolean Modifier&rdquo; can be used to create intersection between two objects. When you first apply it you wont see any change. You need to select another object in your scene to be used as the mesh object for the operation. Then you have 3 different methods to apply the modifier. Read more <a href="https://www.blender.org/manual/modeling/modifiers/generate/booleans.html">here.</a> </p>
+<table>
+<thead>
+<tr>
+<th align="left">Methods</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Intersect</td>
+<td align="left">The target mesh is subtracted from the modified mesh.</td>
+</tr>
+<tr>
+<td align="left">Union</td>
+<td align="left">The target mesh is added to the modified mesh.</td>
+</tr>
+<tr>
+<td align="left">Difference</td>
+<td align="left">The modified mesh is subtracted from the target mesh.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../images/modifier-boolean.gif"><img alt="images/modifier-boolean.gif" src="../images/modifier-boolean.gif" /></a>  </p>
+<h6 id="modifiers-simple-deform">(Modifiers) Simple Deform<a class="headerlink" href="#modifiers-simple-deform" title="Permanent link">&para;</a></h6>
+<blockquote>
+<p>The Simple Deform modifier allows easy application of a simple deformation to an object (meshes, lattices, curves, surfaces and texts are supported).<br />
+<a href="https://www.blender.org/manual/modeling/modifiers/deform/simple_deform.html#simple-deform-modifier">Simple Deform Modifier</a>  </p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">Mode</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Twist</td>
+<td align="left">Rotates around the Z axis.</td>
+</tr>
+<tr>
+<td align="left">Bend</td>
+<td align="left">Bends the mesh over the Z axis.</td>
+</tr>
+<tr>
+<td align="left">Taper</td>
+<td align="left">Linearly scales along Z axis.</td>
+</tr>
+<tr>
+<td align="left">Stretch</td>
+<td align="left">Stretches the object along the Z axis (negative Factor leads to squash), preserving volume by scaling inversely on the X and Y axes..</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../images/modifier-simple-deform.gif"><img alt="images/modifier-simple-deform.gif" src="../images/modifier-simple-deform.gif" /></a>  </p>
+<h6 id="modifiers-array">(Modifiers) Array<a class="headerlink" href="#modifiers-array" title="Permanent link">&para;</a></h6>
+<p>The &ldquo;Array Modifier&rdquo; can be used to duplicate elements. You can offset the copies on the 3 axis relative or constantly. You can use an objects transformation to define the offset as well. There are some more options for this modifier. It can be pretty powerful to create multiple copies of an object. Read more <a href="https://www.blender.org/manual/modeling/modifiers/generate/array.html">here.</a>  </p>
+<p><a href="../images/modifier-array.gif"><img alt="images/modifier-array.gif" src="../images/modifier-array.gif" /></a>  </p>
+<h6 id="modifiers-subdivide-and-displace">(Modifiers) Subdivide and Displace<a class="headerlink" href="#modifiers-subdivide-and-displace" title="Permanent link">&para;</a></h6>
+<p>To show you what can be done by combining several modifiers the following animation shows how to use the <a href="#modifiers-subdivision-surface">Subdivision Surface</a> and <a href="https://www.blender.org/manual/modeling/modifiers/deform/displace.html">Displace</a> modifiers together. The subdivision is done to create more vertices and the displacement to generate some offset on them. The displace modifier uses textures to offset the vertices. You could also use an image or a ramp to displace the vertices. Be creative. This is already rather complex for the starters. Use it as inspiration. There are many more modifiers. To much to explore them all here. Play with some/all of them.  </p>
+<p><a href="../images/modifier-subdivide-displace.gif"><img alt="images/modifier-subdivide-displace.gif" src="../images/modifier-subdivide-displace.gif" /></a>  </p>
+<h6 id="add-ons">Add-ons<a class="headerlink" href="#add-ons" title="Permanent link">&para;</a></h6>
+<p>Additionally to the many build in features of Blender there is a whole ecosystem of <a href="https://docs.blender.org/manual/en/dev/advanced/scripting/introduction.html#extending-blender">Add-ons</a>. There are several Add-ons that are directly distributed with Blender but bot enabled by default. You can browse them in the user preferences an enable those that you like to use. You can also install Add-ons from file. These are Python scripts that are written by members of the community. For our project there are two Add-ons we need to download and install.  </p>
+<p><a href="../images/user-prefs-addon.png"><img alt="images/user-prefs-addon.png" src="../images/user-prefs-addon.png" /></a>  </p>
+<ol>
+<li><a href="https://github.com/addam/Export-Paper-Model-from-Blender">Export: Paper Model (.svg) | Export printable net for paper modeling</a>  </li>
+<li><a href="http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Import-Export/DXF_Exporter">Autodesk DXF (.dxf) | Export geometry to .DXF file format.</a>  </li>
+</ol>
+<h6 id="add-on-paper-model">(Add-on) Paper Model<a class="headerlink" href="#add-on-paper-model" title="Permanent link">&para;</a></h6>
+<p>Both are pretty self-explanatory. The Paper Model Add-on adds under File &gt; Export &gt; Paper Model (.svg) the possibility to export a unfolded vector graphic of the selected object. In the export panel ae on the lower left side some export options for the graphic. You can specify the page size, add margins, create tabs for gluing your model and some more options but the default options are pretty good. If the export fails try to scale your model down or increase the size. We will adjust the plans size later on in a vector editor. Read some more about this Add-on <a href="http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Import-Export/Paper_Model">here.</a></p>
+<p><a href="../images/paprcraft-export.png"><img alt="images/paprcraft-export.png" src="../images/paprcraft-export.png" /></a><br />
+<a href="../images/papercraft-export-settings.png"><img alt="images/papercraft-export-settings.png" src="../images/papercraft-export-settings.png" /></a>  </p>
+<h6 id="add-on-dxf-export">(Add-on) DXF export<a class="headerlink" href="#add-on-dxf-export" title="Permanent link">&para;</a></h6>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The DXF export Add-on might be useful when working with &ldquo;dxf2papercraft&rdquo;.</p>
+</div>
+<h6 id="export">Export<a class="headerlink" href="#export" title="Permanent link">&para;</a></h6>
+<p>To export our data we can use different options. For one we can use the Paper Model Add-on]. Then we have a vector graphic we just have to clean up and convert to <a href="https://en.wikipedia.org/wiki/AutoCAD_DXF">DXF</a> to use it for laser cutting. If this is your chosen workflow, move on to <a href="#creating-clean-data">Creating Clean Plans</a>. If you want to use Slicer or Paperkura you need to use an interchange format like <a href="https://en.wikipedia.org/wiki/STL_(file_format)">STL</a> or <a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file">OBJ</a>. You don&rsquo;t need to specify a final scaling. Slicer and Paperkura both allow to edit the scaling of the Model and the material/paper size.  </p>
+<h6 id="export-stl-stereolithography">(Export) STL STereoLithography<a class="headerlink" href="#export-stl-stereolithography" title="Permanent link">&para;</a></h6>
+<p>If you use STL you need to use the ascii format and apply all modifiers when used. It would be better that you don&rsquo;t apply the modifiers from within the Add-on. As already mentioned the modifiers depend on their stack, so applying them by hand gives you a better control over the outcome.  </p>
+<h6 id="export-obj-wavefront">(Export) OBJ Wavefront<a class="headerlink" href="#export-obj-wavefront" title="Permanent link">&para;</a></h6>
+<p>You can also use the <a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file">Wavefront OBJ</a> format. It has some more options for the export then the STL but creates a equivalent result. You also should apply the modifiers first as mentioned for the <a href="#stl-stereolithography">STL</a> export.  </p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Licensed under MIT License. Copyright (c) 2016 - 2017 Fabian Morón Zirfas & University of Applied Sciences Potsdam (Germany). Please report any issue <a href="https://github.com/FH-Potsdam/doing-papercraft/issues">here</a> on GitHub.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.1.0"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+  </body>
+</html>

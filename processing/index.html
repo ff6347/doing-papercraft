@@ -1,0 +1,646 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This document is a write-down for a workshop @ the University of Applied Sciences Potsdam (Germany) as part of the seminar "Datenobjekte" (data objects) by Professor Boris Müller (a.k.a @borism on Twitter). We will explore the minimal basics of the 3D application Blender to create primitive shapes which will then be unfolded for laser cutting.">
+      
+      
+        <meta name="author" content="Fabian 'fabiantheblind' Morón Zirfas">
+      
+      
+        <link rel="canonical" href="http://fh-potsdam.github.io/doing-papercraft/processing/">
+      
+      
+        <link rel="prev" href="../blender/">
+      
+      
+        <link rel="next" href="../slicer/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Processing - Doing Papercraft</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#about-processing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Doing Papercraft" class="md-header__button md-logo" aria-label="Doing Papercraft" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Doing Papercraft
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Processing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FH-Potsdam/doing-papercraft" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    doing-papercraft
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Doing Papercraft" class="md-nav__button md-logo" aria-label="Doing Papercraft" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Doing Papercraft
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FH-Potsdam/doing-papercraft" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    doing-papercraft
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/" class="md-nav__link">
+        Workflows
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blender/" class="md-nav__link">
+        Blender
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Processing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Processing
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-processing" class="md-nav__link">
+    About Processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-processing" class="md-nav__link">
+    Using Processing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slicer/" class="md-nav__link">
+        Slicer for Fusion 360
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creating-clean-data/" class="md-nav__link">
+        Creating Clean Plans
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../laser.md" class="md-nav__link">
+        Laser
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gallery/" class="md-nav__link">
+        Gallery
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../links/" class="md-nav__link">
+        Links
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-processing" class="md-nav__link">
+    About Processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-processing" class="md-nav__link">
+    Using Processing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+  <h1>Processing</h1>
+
+<h6 id="about-processing">About Processing<a class="headerlink" href="#about-processing" title="Permanent link">&para;</a></h6>
+<p><img alt="images/processing3-logo-256.png" src="../images/processing3-logo-256.png" />  </p>
+<blockquote>
+<p>Processing (programming language)
+Processing is an open source programming language and integrated development environment (IDE) built for the electronic arts, new media art, and visual design communities with the purpose of teaching the fundamentals of computer programming in a visual context, and to serve as the foundation for electronic sketchbooks. The project was initiated in 2001 by Casey Reas and Benjamin Fry, both formerly of the Aesthetics and Computation Group at the MIT Media Lab. One of the stated aims of Processing is to act as a tool to get non-programmers started with programming through the instant gratification of visual feedback. The language builds on the Java language, but uses a simplified syntax and graphics programming model. In 2012, they started the Processing Foundation along with Daniel Shiffman, who formally joined as a third project lead.<br />
+<a href="https://en.wikipedia.org/wiki/Processing_(programming_language)">From Wikipedia, the free encyclopedia</a></p>
+</blockquote>
+<h6 id="using-processing">Using Processing<a class="headerlink" href="#using-processing" title="Permanent link">&para;</a></h6>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We wont go in depth into programming with Processing. This here are just an example on how to export usable 3D data for our purpose.  </p>
+</div>
+<p>As an example we have two simple 3D scene sketches that will create a <a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file">.obj</a> files you can use in Slicer or Paperkura. Before trying to create plans from the export you should take a look at the output in Blender. There might be some errors or problems with the sizes or centers of these models. To use these sketches you need to install the <a href="http://n-e-r-v-o-u-s.com/tools/obj/">OBJExport</a> library from <a href="http://n-e-r-v-o-u-s.com/index.php">Nervous System</a>. There is a guide on the Processing Wiki on <a href="https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library#manual-install">how to install libraries manually</a>. If this worked you can open the Processing IDE, paste the sketches blow into the window and run them. The first sketch will create a simple scene with a cube and plane and will create the output.obj file next to your Processing sketch. The second sketch is a bit more complex. It creates several boxes and also does the output to a .obj file. These files can be imported and edited in <a href="blender/">Blender.</a>   </p>
+<pre><code class="language-java">/**
+ * Simple sketch for doing papercraft
+ * uses the OBJExport library from
+ * http://n-e-r-v-o-u-s.com/tools/obj/
+ *
+ * @author Fabian &quot;fabiantheblind&quot; Morón Zirfas
+ * @license ISC https://opensource.org/licenses/ISC
+ */
+import nervoussystem.obj.*; // import the lib
+
+/**
+ * the setup runs once.
+ * We only set the size of the canvas.
+ *
+ */
+void setup() {
+  size(500, 400, P3D);
+}
+/**
+ * This runs all the time. Actually we use the noLoop() statement.
+ * it prevents that our scene gets exported each frame.
+ *
+ */
+void draw() {
+  background(255);
+  // set the position of the camera
+  camera(width/10, height/3, -30, width/2, height/2, -250, 0, 1, 0);
+  // start the export
+  beginRecord(&quot;nervoussystem.obj.OBJExport&quot;, &quot;output.obj&quot;);
+  // offset the scene to the center of the canvas.
+  // This makes the calculation of the coordiantes easier
+  translate(width/2, height/2, -250);
+  // make a transformation that only affects the plane
+  pushMatrix();
+  // rotate by 90 degrees on the x axis
+  rotateX(radians(90));
+  // start the shape.
+  beginShape(QUADS);
+  // write the vertices
+  vertex(-100, -100, -10);
+  vertex(100, -100, -10);
+  vertex(100, 100, -10);
+  vertex(-100, 100, -10);
+  // end the shape
+  endShape();
+  // reset the matrix of the the sketch so the
+  // rotation does not affect the other objects
+  popMatrix();
+  // we don't want the cube tu be solid
+  noFill();
+  // start the cube
+  beginShape(QUADS);
+  vertex(-10, 10, 10);
+  vertex( 10, 10, 10);
+  vertex( 10, -10, 10);
+  vertex(-10, -10, 10);
+
+  vertex( 10, 10, 10);
+  vertex( 10, 10, -10);
+  vertex( 10, -10, -10);
+  vertex( 10, -10, 10);
+
+  vertex( 10, 10, -10);
+  vertex(-10, 10, -10);
+  vertex(-10, -10, -10);
+  vertex( 10, -10, -10);
+
+  vertex(-10, 10, -10);
+  vertex(-10, 10, 10);
+  vertex(-10, -10, 10);
+  vertex(-10, -10, -10);
+
+  vertex(-10, 10, -10);
+  vertex( 10, 10, -10);
+  vertex( 10, 10, 10);
+  vertex(-10, 10, 10);
+
+  vertex(-10, -10, -10);
+  vertex( 10, -10, -10);
+  vertex( 10, -10, 10);
+  vertex(-10, -10, 10);
+  // end the cube
+  endShape();
+  // end the recording
+  // this also exports the obj file
+  endRecord();
+  // we don't want to run the sketch again
+  noLoop();
+}
+</code></pre>
+<p><a href="../images/processing-simple-3d-scene.png"><img alt="images/processing-simple-3d-scene.png" src="../images/processing-simple-3d-scene.png" /></a>  </p>
+<pre><code class="language-java">/**
+ * creates a scene with some boxes
+ */
+import nervoussystem.obj.*; // import the lib
+
+void setup() {
+  size(500, 500, P3D);
+}
+
+void draw() {
+  background(0);
+  camera(280, 290, -44, 250, 250, 10, 0, 1, 0);
+  beginRecord(&quot;nervoussystem.obj.OBJExport&quot;, &quot;output.obj&quot;);
+
+
+  for (int r = 0; r &lt;= 360; r+=36) {
+    float x = cos(r) * 18;
+    float y = sin(r) * -12;
+    Box b = new Box(width/2 + x, height/2 + y);
+    b.rx = r;
+    b.ry = 30;
+    b.rz = 42;
+    b.draw();
+  }
+  endRecord();
+  noLoop();
+}
+
+class Box {
+  float d = 10;
+  float h = 10;
+  float w = 10;
+  float x = 0;
+  float y = 0;
+  float z = 0;
+  float rx = 0;
+  float ry = 0;
+  float rz = 0;
+  Box() {
+  }
+  Box(float x, float y) {
+    this.x = x;
+    this.y = y;
+  }
+  Box(float x, float y, float z) {
+    this.x = x;
+    this.y = y;
+    this.z = z;
+  }
+  Box(float x, float y, float z, float w, float h, float d) {
+    this.x = x;
+    this.y = y;
+    this.z = z;
+    this.d = d;
+    this.h = h;
+    this.w = w;
+  }
+
+  void draw() {
+    pushMatrix();
+    translate(this.x, this.y, this.z);
+    rotateX(radians(this.rx));
+    rotateY(radians(this.ry));
+    rotateZ(radians(this.rz));
+    box(this.w, this.h, this.d);
+    popMatrix();
+  }
+}
+</code></pre>
+<p><a href="../images/processing-boxen-scene.png"><img alt="images/processing-boxen-scene.png" src="../images/processing-boxen-scene.png" /></a>  </p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Licensed under MIT License. Copyright (c) 2016 - 2017 Fabian Morón Zirfas & University of Applied Sciences Potsdam (Germany). Please report any issue <a href="https://github.com/FH-Potsdam/doing-papercraft/issues">here</a> on GitHub.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.1.0"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+  </body>
+</html>
